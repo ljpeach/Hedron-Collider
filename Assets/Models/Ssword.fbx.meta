@@ -1,8 +1,11 @@
 fileFormatVersion: 2
-guid: d199a4fca045cf94197342b9bba1a0f0
+guid: 5163a46b34653e44db8159457990adb6
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -4003082260948001780
+    second: FullSword|FullSwordAction
   externalObjects: {}
   materials:
     materialImportMode: 1
