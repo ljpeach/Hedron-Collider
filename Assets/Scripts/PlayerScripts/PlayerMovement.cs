@@ -38,7 +38,6 @@ public class PlayerMovement : MonoBehaviour
         float mouseData = -1*Input.GetAxisRaw("Mouse Y");
         float resetCam = camRotation;
         camRotation += -1*mouseData * lookMultiplier;
-        Debug.Log(camRotation);
         if (camRotation >= -90 && camRotation <= 90)
         {
             PlayerCam.transform.Rotate(-1 * Input.GetAxisRaw("Mouse Y") * lookMultiplier, 0f, 0f);
