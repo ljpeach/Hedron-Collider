@@ -7,7 +7,7 @@ public class SwordManager : MonoBehaviour
     public int swordDamage;
     int animationState;
     Animation anim;
-    string[] animNames ={"LeftSwipe","RightSwipe"};
+    string[] animNames ={"LeftSwipe","RightSwipe","ReturnSwipe"};
 
     void Start()
     {
@@ -20,14 +20,29 @@ public class SwordManager : MonoBehaviour
     {
         if (Input.GetButton("Fire1") &&!anim.isPlaying)
         {
+            CancelInvoke();
             Debug.Log(anim["RightSwipe"].name);
             anim.Play(animNames[animationState]);
-            animationState += 1;
-            if (animationState >= animNames.Length)
+            if (animationState == 2)
+            {
+                animationState = 1;
+            }
+            else
+            { 
+                animationState += 1;
+            }
+            if (animationState >= 3)
             {
                 animationState = 0;
             }
+            Invoke("reset", 1f);
         }
+    }
+
+    void reset()
+    {
+        anim.Play(animNames[animationState-1] + "Return");
+        animationState = 0;
     }
 
 }

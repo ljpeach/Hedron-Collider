@@ -917,6 +917,9 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: 976433096ec374a4ea10da4d75178b31, type: 2}
   - {fileID: 7400000, guid: e598e2a08cb826e479c5a28fade26442, type: 2}
+  - {fileID: 7400000, guid: edab7876e1a4ec24092c23e3dd5a266d, type: 2}
+  - {fileID: 7400000, guid: 1b93cf6ffab11364f8ffb6cb5a52e10a, type: 2}
+  - {fileID: 7400000, guid: 487e9dbe91d6da54c9011d6c40944435, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -971,17 +974,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 5163a46b34653e44db8159457990adb6,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 13.573856
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5163a46b34653e44db8159457990adb6,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -21.109068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5163a46b34653e44db8159457990adb6,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 4.613961
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 5163a46b34653e44db8159457990adb6,
         type: 3}
