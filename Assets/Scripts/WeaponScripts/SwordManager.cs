@@ -21,7 +21,6 @@ public class SwordManager : MonoBehaviour
         if (Input.GetButton("Fire1") &&!anim.isPlaying)
         {
             CancelInvoke();
-            Debug.Log(anim["RightSwipe"].name);
             anim.Play(animNames[animationState]);
             if (animationState == 2)
             {
