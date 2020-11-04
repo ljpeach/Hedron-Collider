@@ -267,6 +267,10 @@ MonoBehaviour:
   speed: 0
   player: {fileID: 0}
   gravity: 0
+  attackRange: 0
+  chargeTime: 0
+  postLockTime: 0
+  chargeDist: 0
 --- !u!54 &4761650113251005177
 Rigidbody:
   m_ObjectHideFlags: 0

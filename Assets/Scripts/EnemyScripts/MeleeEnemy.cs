@@ -96,13 +96,13 @@ public class MeleeEnemy : MonoBehaviour
             transform.localScale = new Vector3(1f, 1f, 1f);
             lght.intensity = 0;
             chargeDuration = 0;
+            gameObject.tag = "playerDamage";
         }
         
     }
 
     void release()
     {
-        gameObject.tag = "playerDamage";
         transform.position = Vector3.MoveTowards(transform.position, target, chargeDist * Time.deltaTime);
         if (Vector3.Distance(transform.position, target) < 1)
         {
