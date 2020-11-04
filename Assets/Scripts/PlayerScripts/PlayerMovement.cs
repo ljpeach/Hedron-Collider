@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public float gravity;
     public float jumpHeight;
+    public float sprintMulti;
     float airSpeed;
     float camRotation;
 
@@ -65,6 +66,15 @@ public class PlayerMovement : MonoBehaviour
             }
         }
         rawMove.y += airSpeed;
-        characterController.Move(transform.TransformVector(rawMove)*Time.deltaTime*moveSpeed);
+        float runMulti;
+        if (Input.GetButton("Sprint"))
+        {
+            runMulti = sprintMulti;
+        }
+        else
+        {
+            runMulti = 1;
+        }
+        characterController.Move(transform.TransformVector(rawMove)*Time.deltaTime*moveSpeed*runMulti);
     }
 }
