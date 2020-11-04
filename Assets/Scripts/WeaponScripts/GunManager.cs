@@ -7,6 +7,7 @@ public class GunManager: MonoBehaviour
     Animation anim;
     public GameObject projectileSource;
     ProjectileValues shooty;
+
     // Start is called before the first frame update
     void Start()
     {
