@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     {
         handleCameraRotate();
         handleMovement();
+        //Debug.Log(transform.rotation);
     }
 
     void handleCameraRotate() 

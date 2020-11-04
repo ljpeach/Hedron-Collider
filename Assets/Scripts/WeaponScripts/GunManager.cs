@@ -5,10 +5,13 @@ using UnityEngine;
 public class GunManager: MonoBehaviour
 {
     Animation anim;
+    public GameObject projectileSource;
+    ProjectileValues shooty;
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animation>();
+        shooty = projectileSource.GetComponent<ProjectileValues>();
     }
 
     // Update is called once per frame
@@ -17,6 +20,7 @@ public class GunManager: MonoBehaviour
         if (Input.GetButtonDown("Fire1") && !anim.isPlaying)
         {
             anim.Play("Recoil");
+            shooty.Shoot();
         }
     }
 }
