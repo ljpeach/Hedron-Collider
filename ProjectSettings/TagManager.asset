@@ -7,6 +7,7 @@ TagManager:
   - enemyDamage
   - Ground
   - playerDamage
+  - AISphere
   layers:
   - Default
   - TransparentFX

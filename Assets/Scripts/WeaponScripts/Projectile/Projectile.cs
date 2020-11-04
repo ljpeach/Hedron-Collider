@@ -29,10 +29,13 @@ public class Projectile : MonoBehaviour
         transform.position += travelVector*Time.deltaTime;
     }
 
-    void OnTriggerEnter()
+    void OnTriggerEnter(Collider other)
     {
         Debug.Log("ProjEnter");
-        DestroyProjectile();
+        if (other.gameObject.tag != "AISphere")
+        { 
+            DestroyProjectile(); 
+        }
     }
 
     void DestroyProjectile()
