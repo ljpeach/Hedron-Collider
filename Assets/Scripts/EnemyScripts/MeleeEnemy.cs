@@ -13,7 +13,7 @@ public class MeleeEnemy : MonoBehaviour
     public float postLockTime;
     public float chargeDist;
 
-    //Renderer rn;
+    Light lght;
     Transform playerPos;
     Vector3 target;
     int currentHealth;
@@ -21,7 +21,7 @@ public class MeleeEnemy : MonoBehaviour
     bool isGrounded;
     int mode;
     float chargeDuration;
-    //float emissive;
+    float intensity;
 
     // Start is called before the first frame update
     void Start()
@@ -31,8 +31,8 @@ public class MeleeEnemy : MonoBehaviour
         airSpeed = 0;
         isGrounded = false;
         mode = 0;
-        //rn = GetComponent<Renderer>();
-        //emissive = 0;
+        lght = GetComponent<Light>();
+        intensity = 0;
         chargeDuration = 0;
         //rn.material.EnableKeyword("_EmissiveExposureWeight");
     }
@@ -83,13 +83,15 @@ public class MeleeEnemy : MonoBehaviour
         }
         chargeDuration += Time.deltaTime;
         Vector3 scale =new Vector3(1,1f-0.5f*(chargeDuration / chargeTime),1);
+        intensity = 2f * chargeDuration / chargeTime;
         //Debug.Log(rn.material.GetFloat("_EmissiveExposureWeight"));
-        //rn.material.SetFloat("_EmissiveExposureWeight", emissive-10f);
+        lght.intensity = intensity;
         transform.localScale = scale;
         if (scale.y <= 0.5f)
         {
             mode += 1;
             transform.localScale = new Vector3(1f, 1f, 1f);
+            lght.intensity = 0;
             chargeDuration = 0;
         }
         
