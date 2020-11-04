@@ -22,15 +22,16 @@ public class MainRoom : MonoBehaviour
         neighborList[4] = neighborList5.GetComponent<MainRoom>();
         neighborList[5] = neighborList6.GetComponent<MainRoom>();
         */
+        enemySpawnManager.GetComponent<Spawn>().fillOut();
     }
 
     void emptySwitch()
     {
-        //GetComponentInParent<ScalingTracker>().claimedCount--;
+        GetComponentInParent<ScalingTracker>().claimedCount--;
         roomState = "Empty";
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < neighborList.Length; i++)
         {
-            if (neighborList[i].roomState == "Claimed")
+            if (neighborList[i].GetComponent<MainRoom>().roomState == "Claimed")
             {
                 Invoke("warringSwitch", empty2Warring);
             }
@@ -49,12 +50,12 @@ public class MainRoom : MonoBehaviour
     void claimedSwitch()
     {
         enemySpawnManager.GetComponent<Spawn>().fillOut();
-        //GetComponentInParent<ScalingTracker>().claimedCount++;
-        for (int i = 0; i < 6; i++)
+        GetComponentInParent<ScalingTracker>().claimedCount++;
+        for (int i = 0; i < neighborList.Length; i++)
         {
-            if (neighborList[i].roomState == "Empty")
+            if (neighborList[i].GetComponent<MainRoom>().roomState == "Empty")
             {
-                neighborList[i].warringSwitch();
+                neighborList[i].GetComponent<MainRoom>().warringSwitch();
             }
         }
     }

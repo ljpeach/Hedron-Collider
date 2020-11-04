@@ -31,7 +31,7 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("ProjEnter");
+        //Debug.Log("ProjEnter");
         if (other.gameObject.tag != "AISphere")
         { 
             DestroyProjectile(); 

@@ -117,10 +117,11 @@ public class MeleeEnemy : MonoBehaviour
         if (other.gameObject.CompareTag("enemyDamage"))
         {
             currentHealth -= other.gameObject.GetComponent<DealDamage>().damage;
-        }
-        if (currentHealth <= 0)
-        {
-            destroySequence();
+            if (currentHealth <= 0)
+            {
+                //Debug.Log(currentHealth);
+                destroySequence();
+            }
         }
     }
 
