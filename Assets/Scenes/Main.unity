@@ -622,6 +622,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 387677856}
+  - component: {fileID: 387677857}
   m_Layer: 0
   m_Name: WeaponHandler
   m_TagString: Untagged
@@ -645,6 +646,20 @@ Transform:
   m_Father: {fileID: 181904418}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &387677857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387677855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2e129f547a7d4543bcaf1678aee48b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sword: {fileID: 1763150426}
+  gun: {fileID: 1315626113}
 --- !u!1 &402058759
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,7 +945,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1315626114
 Transform:
   m_ObjectHideFlags: 0
@@ -1118,7 +1133,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1763150427
 Transform:
   m_ObjectHideFlags: 0
