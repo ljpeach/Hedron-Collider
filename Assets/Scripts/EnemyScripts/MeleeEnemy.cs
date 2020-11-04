@@ -5,25 +5,132 @@ using UnityEngine;
 public class MeleeEnemy : MonoBehaviour
 {
     public int healthMax;
+    public float speed;
+    public GameObject player;
+    public float gravity;
+    public float attackRange;
+    public float chargeTime;
+    public float postLockTime;
+    public float chargeDist;
+
+    //Renderer rn;
+    Transform playerPos;
+    Vector3 target;
     int currentHealth;
+    float airSpeed;
+    bool isGrounded;
+    int mode;
+    float chargeDuration;
+    //float emissive;
 
     // Start is called before the first frame update
     void Start()
     {
+        playerPos = player.GetComponent<Transform>();
         currentHealth = healthMax;
+        airSpeed = 0;
+        isGrounded = false;
+        mode = 0;
+        //rn = GetComponent<Renderer>();
+        //emissive = 0;
+        chargeDuration = 0;
+        //rn.material.EnableKeyword("_EmissiveExposureWeight");
+    }
+
+    void Update()
+    {
+        if (isGrounded || mode>=2)
+        {
+            airSpeed = 0;
+        }
+        else
+        {
+            airSpeed += -1 * gravity*Time.deltaTime;
+        }
+        if (mode == 0)
+        {
+            chase();
+        }
+        else if (mode == 1)
+        {
+            charge();
+        }
+        else if (mode == 2)
+        {
+            release();
+        }
+    }
+
+    void chase()
+    {
+        if (Vector3.Distance(transform.position, playerPos.position) <= attackRange)
+        {
+            mode += 1;
+            return;
+        }
+        transform.LookAt(playerPos);
+        Vector3 mid = Vector3.MoveTowards(transform.position, playerPos.position, speed * Time.deltaTime);
+        mid.y += airSpeed * Time.deltaTime;
+        transform.position = mid;
+    }
+
+    void charge()
+    {
+        if (chargeTime - chargeDuration > postLockTime)
+        {
+            transform.LookAt(playerPos);
+            target = playerPos.position;
+        }
+        chargeDuration += Time.deltaTime;
+        Vector3 scale =new Vector3(1,1f-0.5f*(chargeDuration / chargeTime),1);
+        //Debug.Log(rn.material.GetFloat("_EmissiveExposureWeight"));
+        //rn.material.SetFloat("_EmissiveExposureWeight", emissive-10f);
+        transform.localScale = scale;
+        if (scale.y <= 0.5f)
+        {
+            mode += 1;
+            transform.localScale = new Vector3(1f, 1f, 1f);
+            chargeDuration = 0;
+        }
+        
+    }
+
+    void release()
+    {
+        gameObject.tag = "playerDamage";
+        transform.position = Vector3.MoveTowards(transform.position, target, chargeDist * Time.deltaTime);
+        if (Vector3.Distance(transform.position, target) < 1)
+        {
+            mode = 0;
+        }
+
     }
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("here1");
         if (other.gameObject.CompareTag("enemyDamage"))
         {
-            Debug.Log("here");
             currentHealth -= other.gameObject.GetComponent<DealDamage>().damage;
         }
         if (currentHealth <= 0)
         {
             destroySequence();
+        }
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.tag == "Ground")
+        {
+            isGrounded = true;
+        }
+    }
+
+    void OnCollisionExit(Collision other)
+    {
+        if( other.gameObject.tag == "Ground")
+        {
+            isGrounded = false;
         }
     }
 
