@@ -8,7 +8,7 @@ public class Spawn : MonoBehaviour
     {
         foreach (Transform child in transform)
         {
-            child.gameObject.GetComponent<Spawner>().createEnemies();
+            child.gameObject.BroadcastMessage("createEnemies", SendMessageOptions.DontRequireReceiver);
         }
     }
 }

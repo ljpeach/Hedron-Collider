@@ -15,7 +15,7 @@ public class Spawner : MonoBehaviour
     public void createEnemies()
     {
         
-        GameObject newEnemy = Instantiate(enemy, transform.position+new Vector3(0,1f,0), transform.rotation);
+        GameObject newEnemy = Instantiate(enemy, transform.position+new Vector3(0,1f,0), transform.rotation, GetComponentInParent<Spawn>().gameObject.transform);
         MeleeEnemy setup = newEnemy.GetComponent<MeleeEnemy>();
         setup.healthMax = 10;
         setup.speed = 2;
