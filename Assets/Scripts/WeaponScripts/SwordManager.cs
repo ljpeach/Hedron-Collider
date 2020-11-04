@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SwordManager : MonoBehaviour
 {
-    public int swordDamage;
     int animationState;
     Animation anim;
     string[] animNames ={"LeftSwipe","RightSwipe","ReturnSwipe"};

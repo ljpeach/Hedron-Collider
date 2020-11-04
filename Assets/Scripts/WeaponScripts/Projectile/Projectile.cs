@@ -6,8 +6,8 @@ public class Projectile : MonoBehaviour
 {
     Vector3 travelVector;
     float speed;
-    int damage;
     float lifetime;
+    //DealDamage damg;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +16,10 @@ public class Projectile : MonoBehaviour
     }
     public void setAttributes(float spd, int dmg, float life)
     {
+        
         speed = spd;
-        damage = dmg;
+        GetComponent<DealDamage>().damage=dmg;
+        //damg.setDamage(dmg);
         lifetime = life;
     }
 
@@ -27,8 +29,9 @@ public class Projectile : MonoBehaviour
         transform.position += travelVector*Time.deltaTime;
     }
 
-    void OnCollision()
+    void OnTriggerEnter()
     {
+        Debug.Log("ProjEnter");
         DestroyProjectile();
     }
 

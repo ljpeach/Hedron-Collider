@@ -25,6 +25,7 @@ public class ProjectileValues : MonoBehaviour
     public void Shoot()
     {
         GameObject proj=Instantiate(projectile,start.position,start.rotation);
+        proj.tag = "enemyDamage";
         Transform projTransform = proj.GetComponent<Transform>();
         Projectile projInfo = proj.GetComponent<Projectile>();
         projInfo.setAttributes(speed, damage,projectileLife);
