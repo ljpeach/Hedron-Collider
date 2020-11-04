@@ -13,6 +13,7 @@ public class MeleeEnemy : MonoBehaviour
     public float postLockTime;
     public float chargeDist;
 
+    Rigidbody rigidBody;
     Light lght;
     Transform playerPos;
     Vector3 target;
@@ -32,6 +33,7 @@ public class MeleeEnemy : MonoBehaviour
         isGrounded = false;
         mode = 0;
         lght = GetComponent<Light>();
+        rigidBody = GetComponent<Rigidbody>();
         intensity = 0;
         chargeDuration = 0;
         //rn.material.EnableKeyword("_EmissiveExposureWeight");
@@ -81,10 +83,11 @@ public class MeleeEnemy : MonoBehaviour
             transform.LookAt(playerPos);
             target = playerPos.position;
         }
+        rigidBody.velocity = Vector3.zero;
+        rigidBody.angularVelocity = Vector3.zero;
         chargeDuration += Time.deltaTime;
         Vector3 scale =new Vector3(1,1f-0.5f*(chargeDuration / chargeTime),1);
         intensity = 2f * chargeDuration / chargeTime;
-        //Debug.Log(rn.material.GetFloat("_EmissiveExposureWeight"));
         lght.intensity = intensity;
         transform.localScale = scale;
         if (scale.y <= 0.5f)
@@ -104,6 +107,7 @@ public class MeleeEnemy : MonoBehaviour
         if (Vector3.Distance(transform.position, target) < 1)
         {
             mode = 0;
+            gameObject.tag = "Untagged";
         }
 
     }

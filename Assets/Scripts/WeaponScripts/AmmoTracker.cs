@@ -21,9 +21,13 @@ public class AmmoTracker : MonoBehaviour
 
     void Update()
     {
-        if (currentAmmo<ammoMax)
+        if (currentAmmo < ammoMax)
         {
-            currentAmmo += rechargeRate/100;
+            currentAmmo += rechargeRate / 100;
+        }
+        else
+        {
+            currentAmmo = 100f;
         }
         setCountText();
     }
