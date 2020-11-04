@@ -17,9 +17,14 @@ public class SwordManager : MonoBehaviour
 
     void Update()
     {
+        if (!anim.isPlaying)
+        {
+            gameObject.tag = "Untagged";
+        }
         if (Input.GetButton("Fire1") &&!anim.isPlaying)
         {
             CancelInvoke();
+            gameObject.tag = "enemyDamage";
             anim.Play(animNames[animationState]);
             if (animationState == 2)
             {

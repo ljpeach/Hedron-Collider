@@ -166,7 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationY: {fileID: 1276320294}
   rotationX: {fileID: 181904415}
-  speed: 10
+  speed: 20
   damage: 3
   projectile: {fileID: 4339595433952449526, guid: 40d0ea9cde26a0e42893ae037451a62f,
     type: 3}
@@ -1288,7 +1288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb125a743003cae4492284e910b5bdd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 3
 --- !u!54 &1466665321
 Rigidbody:
   m_ObjectHideFlags: 0
