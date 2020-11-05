@@ -2649,6 +2649,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 113905640}
     m_Modifications:
+    - target: {fileID: 252137502986678557, guid: 4b7b30f141ab1d64d8111b101df8e308,
+        type: 3}
+      propertyPath: aggro
+      value: 
+      objectReference: {fileID: 1276320294}
     - target: {fileID: 563939824241481322, guid: 4b7b30f141ab1d64d8111b101df8e308,
         type: 3}
       propertyPath: aggro
@@ -2709,11 +2714,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2281898536607467705, guid: 4b7b30f141ab1d64d8111b101df8e308,
+        type: 3}
+      propertyPath: aggro
+      value: 
+      objectReference: {fileID: 1276320294}
+    - target: {fileID: 2351634779116505418, guid: 4b7b30f141ab1d64d8111b101df8e308,
+        type: 3}
+      propertyPath: aggro
+      value: 
+      objectReference: {fileID: 1276320294}
+    - target: {fileID: 2368563827647903015, guid: 4b7b30f141ab1d64d8111b101df8e308,
+        type: 3}
+      propertyPath: aggro
+      value: 
+      objectReference: {fileID: 1276320294}
+    - target: {fileID: 5012446935044820530, guid: 4b7b30f141ab1d64d8111b101df8e308,
+        type: 3}
+      propertyPath: aggro
+      value: 
+      objectReference: {fileID: 1276320294}
     - target: {fileID: 5574554785049800269, guid: 4b7b30f141ab1d64d8111b101df8e308,
         type: 3}
       propertyPath: m_Name
       value: Room
       objectReference: {fileID: 0}
+    - target: {fileID: 6107371661552157300, guid: 4b7b30f141ab1d64d8111b101df8e308,
+        type: 3}
+      propertyPath: aggro
+      value: 
+      objectReference: {fileID: 1276320294}
+    - target: {fileID: 7741556472028835858, guid: 4b7b30f141ab1d64d8111b101df8e308,
+        type: 3}
+      propertyPath: aggro
+      value: 
+      objectReference: {fileID: 1276320294}
     - target: {fileID: 8781888631834484641, guid: 4b7b30f141ab1d64d8111b101df8e308,
         type: 3}
       propertyPath: neighborList.Array.size
