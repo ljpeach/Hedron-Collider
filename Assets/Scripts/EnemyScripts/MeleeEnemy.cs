@@ -25,6 +25,7 @@ public class MeleeEnemy : MonoBehaviour
     float chargeDuration;
     float intensity;
     bool collided;
+    Spawn aiCheck;
 
     // Start is called before the first frame update
     void Start()
@@ -42,11 +43,22 @@ public class MeleeEnemy : MonoBehaviour
         parentRoom = GetComponentInParent<MainRoom>();
         parentRoom.enemyCount += 1;
         collided = false;
+        aiCheck = GetComponentInParent<Spawn>();
         //rn.material.EnableKeyword("_EmissiveExposureWeight");
     }
 
     void Update()
     {
+        if (!aiCheck.aiOn)
+        {
+            mode = 0;
+            transform.localScale = new Vector3(1f, 1f, 1f);
+            lght.intensity = 0;
+            chargeDuration = 0;
+            gameObject.tag = "meleeEnemy";
+            airSpeed = 0;
+            return;
+        }
         if (isGrounded || mode>=2)
         {
             airSpeed = 0;
