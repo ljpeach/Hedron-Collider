@@ -46,6 +46,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   RoF: 5
+  radius: 5
+  turnSpeed: 10
+  healthMax: 15
+  currentHealth: 0
+  direction: 0
 --- !u!1 &631354953709776967
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,6 +388,18 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 525853990749090806, guid: b060fc1917d164a4aa00e5fc768d4d6e, type: 3}
+--- !u!114 &5562853736653268354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8360542999978171846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdbe39ef5273e7a4ea21cfea66717ef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8703193490002993303
 PrefabInstance:
   m_ObjectHideFlags: 0
