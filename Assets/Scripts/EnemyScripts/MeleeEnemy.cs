@@ -24,6 +24,7 @@ public class MeleeEnemy : MonoBehaviour
     int mode;
     float chargeDuration;
     float intensity;
+    bool collided;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +41,7 @@ public class MeleeEnemy : MonoBehaviour
         chargeDuration = 0;
         parentRoom = GetComponentInParent<MainRoom>();
         parentRoom.enemyCount += 1;
+        collided = false;
         //rn.material.EnableKeyword("_EmissiveExposureWeight");
     }
 
@@ -85,7 +87,7 @@ public class MeleeEnemy : MonoBehaviour
         if (chargeTime - chargeDuration > postLockTime)
         {
             transform.LookAt(playerPos);
-            target = playerPos.position;
+            target = playerPos.position+transform.forward;
         }
         rigidBody.velocity = Vector3.zero;
         rigidBody.angularVelocity = Vector3.zero;
@@ -108,7 +110,7 @@ public class MeleeEnemy : MonoBehaviour
     void release()
     {
         transform.position = Vector3.MoveTowards(transform.position, target, chargeDist * Time.deltaTime);
-        if (Vector3.Distance(transform.position, target) < 1)
+        if (Vector3.Distance(transform.position, target) < 1 || collided)
         {
             mode = 0;
             gameObject.tag = "Untagged";
@@ -131,10 +133,15 @@ public class MeleeEnemy : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if(other.gameObject.tag == "Ground")
+        if (other.gameObject.tag == "Ground")
         {
             isGrounded = true;
         }
+        else 
+        {
+            collided = true;
+        }
+
     }
 
     void OnCollisionExit(Collision other)
@@ -143,6 +150,7 @@ public class MeleeEnemy : MonoBehaviour
         {
             isGrounded = false;
         }
+        collided = false;
     }
 
     void destroySequence()
