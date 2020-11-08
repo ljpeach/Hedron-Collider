@@ -21,7 +21,7 @@ public class DoorController : MonoBehaviour
             e2open.SetActive(true);
             if (Input.GetButton("Interact"))
             {
-                Debug.Log("dooropen");
+                //Debug.Log("dooropen");
                 StartCoroutine("openDoor");
             }
         }

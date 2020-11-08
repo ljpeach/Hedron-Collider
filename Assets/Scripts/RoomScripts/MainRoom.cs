@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MainRoom : MonoBehaviour
 {
-    public MainRoom[] neighborList;
+    public GameObject[] neighborList;
     //public GameObject neighborList1, neighborList2, neighborList3, neighborList4, neighborList5, neighborList6;
     public GameObject enemySpawnManager;
     public string roomState;
@@ -36,34 +36,57 @@ public class MainRoom : MonoBehaviour
     {
         claimCounter.claimedCount--;
         roomState = "Empty";
+
         for (int i = 0; i < neighborList.Length; i++)
         {
-            if (neighborList[i].GetComponent<MainRoom>().roomState == "Claimed")
+            MainRoom roomRef = neighborList[i].GetComponent<MainRoom>();
+            if (roomRef.roomState == "Claimed")
             {
-                Invoke("warringSwitch", empty2Warring);
+                invokeWar();
             }
-            else
+            bool cancel = true;
+            for(int j=0; j<roomRef.neighborList.Length; j++)
             {
-                CancelInvoke();
+                if (roomRef.neighborList[j].GetComponent<MainRoom>().roomState == "Claimed")
+                {
+                    cancel = false;
+                    break;
+                }
+            }
+            if (roomRef.roomState=="Empty" && cancel) 
+            {
+                roomRef.cancelSwitch();
             }
         }
     }
 
     void warringSwitch()
     {
+        roomState = "Warring";
         Invoke("claimedSwitch", warringDuration);
     }
 
     void claimedSwitch()
     {
+        roomState = "Claimed";
         enemySpawnManager.GetComponent<Spawn>().fillOut();
         claimCounter.claimedCount++;
         for (int i = 0; i < neighborList.Length; i++)
         {
             if (neighborList[i].GetComponent<MainRoom>().roomState == "Empty")
             {
-                neighborList[i].GetComponent<MainRoom>().warringSwitch();
+                neighborList[i].GetComponent<MainRoom>().invokeWar();
             }
         }
+    }
+
+    public void invokeWar()
+    {
+        Invoke("warringSwitch", empty2Warring);
+    }
+
+    public void cancelSwitch()
+    {
+        CancelInvoke();
     }
 }

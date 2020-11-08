@@ -6,7 +6,7 @@ public class Spawner : MonoBehaviour
 {
     public GameObject enemy;
     public GameObject aggro;
-    public ScalingTracker enemyScaler;
+    //public ScalingTracker enemyScaler;
 
     meleeStats meleeNums;
 

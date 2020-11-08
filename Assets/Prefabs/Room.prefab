@@ -45,7 +45,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 2436919462546381668, guid: 2b551791639e53247bb1e4da32bd3e4a, type: 3}
   aggro: {fileID: 0}
-  enemyScaler: {fileID: 0}
 --- !u!1 &682790215584669457
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,7 +90,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 2436919462546381668, guid: 2b551791639e53247bb1e4da32bd3e4a, type: 3}
   aggro: {fileID: 0}
-  enemyScaler: {fileID: 0}
 --- !u!1 &1085310418209719122
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,7 +135,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 2436919462546381668, guid: 2b551791639e53247bb1e4da32bd3e4a, type: 3}
   aggro: {fileID: 0}
-  enemyScaler: {fileID: 0}
 --- !u!1 &1108527114853093406
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,7 +239,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 2436919462546381668, guid: 2b551791639e53247bb1e4da32bd3e4a, type: 3}
   aggro: {fileID: 0}
-  enemyScaler: {fileID: 0}
 --- !u!1 &3484706972875031922
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,7 +284,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 2436919462546381668, guid: 2b551791639e53247bb1e4da32bd3e4a, type: 3}
   aggro: {fileID: 0}
-  enemyScaler: {fileID: 0}
 --- !u!1 &4916420427025112778
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,7 +359,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 2436919462546381668, guid: 2b551791639e53247bb1e4da32bd3e4a, type: 3}
   aggro: {fileID: 0}
-  enemyScaler: {fileID: 0}
 --- !u!1 &5212216283213333195
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,7 +479,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   enemySpawnManager: {fileID: 1108527114853093406}
-  roomState: Empty
+  roomState: Claimed
   empty2Warring: 0
   warringDuration: 0
   enemyCount: 0
@@ -498,6 +492,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6489198177132623608}
+  - component: {fileID: 7708030345756351256}
   m_Layer: 0
   m_Name: Spawners
   m_TagString: Untagged
@@ -527,6 +522,26 @@ Transform:
   m_Father: {fileID: 3781578246979154927}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7708030345756351256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6460581939900168187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be0716a6d291911469784fcd50c03f36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: 2
+  enemySpeed: 2
+  enemyGravity: 20
+  attackRange: 5
+  chargeTime: 5
+  postLockTime: 2
+  chargeDist: 10
+  enemyDamage: 5
 --- !u!1 &6554514878529837120
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,7 +587,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 2436919462546381668, guid: 2b551791639e53247bb1e4da32bd3e4a, type: 3}
   aggro: {fileID: 0}
-  enemyScaler: {fileID: 0}
 --- !u!1 &6860372205189464622
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,7 +702,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 2436919462546381668, guid: 2b551791639e53247bb1e4da32bd3e4a, type: 3}
   aggro: {fileID: 0}
-  enemyScaler: {fileID: 0}
 --- !u!1001 &1119135214333874463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -853,15 +866,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de28157988f709c49b239f4ec0ee55bd, type: 3}
---- !u!4 &2184068818369047759 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: de28157988f709c49b239f4ec0ee55bd,
-    type: 3}
-  m_PrefabInstance: {fileID: 1857143831902391076}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1514493327919330933 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: de28157988f709c49b239f4ec0ee55bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1857143831902391076}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2184068818369047759 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: de28157988f709c49b239f4ec0ee55bd,
     type: 3}
   m_PrefabInstance: {fileID: 1857143831902391076}
   m_PrefabAsset: {fileID: 0}

@@ -26,6 +26,7 @@ public class MeleeEnemy : MonoBehaviour
     float intensity;
     bool collided;
     Spawn aiCheck;
+    bool dead = false;
 
     // Start is called before the first frame update
     void Start()
@@ -135,10 +136,12 @@ public class MeleeEnemy : MonoBehaviour
         if (other.gameObject.CompareTag("enemyDamage"))
         {
             currentHealth -= other.gameObject.GetComponent<DealDamage>().damage;
-            if (currentHealth <= 0)
+            if (!dead && currentHealth <= 0)
             {
+                dead = true;
                 //Debug.Log(currentHealth);
                 destroySequence();
+
             }
         }
     }
