@@ -40,6 +40,10 @@ public class AISwitch : MonoBehaviour
                 playerNums.campCount--;
             }
         }
+        else if(other.gameObject.tag == "Player")
+        {
+            campUI.SetActive(false);
+        }
     }
 
     void OnTriggerExit(Collider other)
