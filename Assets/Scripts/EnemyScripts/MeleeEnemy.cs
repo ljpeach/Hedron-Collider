@@ -28,7 +28,7 @@ public class MeleeEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GetComponentInParent<PlayerIndicator>().player;
+        player = GetComponentInParent<MiscReferences>().player;
         playerPos = player.GetComponent<Transform>();
         currentHealth = healthMax;
         airSpeed = 0;

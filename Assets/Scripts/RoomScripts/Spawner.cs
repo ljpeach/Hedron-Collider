@@ -13,7 +13,7 @@ public class Spawner : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        aggro = GetComponentInParent<PlayerIndicator>().player;
+        aggro = GetComponentInParent<MiscReferences>().player;
         meleeNums = GetComponentInParent<meleeStats>();
         //enemyScaler = GetComponentInParent<ScalingTracker>();
     }

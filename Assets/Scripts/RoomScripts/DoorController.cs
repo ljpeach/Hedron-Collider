@@ -1,31 +1,37 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class DoorController : MonoBehaviour
 {
-    bool inWay;
     Vector3 startPos;
+    GameObject e2open;
     // Start is called before the first frame update
     void Start()
     {
         startPos = transform.position;
+        e2open = GetComponentInParent<MiscReferences>().doorUI;
+        e2open.SetActive(false);
     }
-    void OnTriggerStay()
+    void OnTriggerStay(Collider other)
     {
-        if (Input.GetButton("Interact"))
+        if( other.gameObject.tag == "Player")
         {
-            Debug.Log("dooropen");
-            StartCoroutine("openDoor");
-            inWay = true;
+            e2open.SetActive(true);
+            if (Input.GetButton("Interact"))
+            {
+                Debug.Log("dooropen");
+                StartCoroutine("openDoor");
+            }
         }
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (inWay && other.gameObject.tag == "player")
+        if (other.gameObject.tag == "Player")
         {
-            inWay = false;
+            e2open.SetActive(false);
         }
     }
 
@@ -33,7 +39,6 @@ public class DoorController : MonoBehaviour
     {
         while (transform.position.y > startPos.y - 5f)
         {
-            Debug.Log(transform.position.y);
             transform.position -= new Vector3(0, .01f, 0);
             yield return null;
         }
