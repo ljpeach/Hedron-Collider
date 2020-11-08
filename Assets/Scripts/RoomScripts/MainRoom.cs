@@ -71,6 +71,7 @@ public class MainRoom : MonoBehaviour
             if (child.name == "RoomCenter")
             {
                 Instantiate(camp, child);
+                GetComponentInParent<MiscReferences>().player.GetComponent<NumberTracker>().respawner.transform.position = child.position;
                 break;
             }
         }

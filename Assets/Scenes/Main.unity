@@ -334,7 +334,7 @@ Transform:
   - {fileID: 682755393429266908}
   - {fileID: 5066173225904260491}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &113905641
 MonoBehaviour:
@@ -1501,6 +1501,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 610045076}
   m_CullTransparentMesh: 0
+--- !u!1 &850607810
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 850607811}
+  m_Layer: 0
+  m_Name: RespawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &850607811
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850607810}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1276320294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,6 +1544,7 @@ GameObject:
   - component: {fileID: 1276320297}
   - component: {fileID: 1276320298}
   - component: {fileID: 1276320299}
+  - component: {fileID: 1276320300}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Player
@@ -1573,6 +1604,7 @@ MonoBehaviour:
   gravity: 4
   jumpHeight: 2
   sprintMulti: 2
+  respawner: {fileID: 0}
 --- !u!114 &1276320298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1586,12 +1618,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   campCount: 0
-  healthMax: 50
+  healthMax: 5
   healthBar: {fileID: 610045078}
   campBar: {fileID: 2129030653}
   regen: 1
-  regenRate: 0.5
+  regenRate: 0
   regenDelay: 5
+  respawner: {fileID: 850607810}
 --- !u!114 &1276320299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1604,6 +1637,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10b3e794cc22e55458aff316aa4d7796, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &1276320300
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276320294}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.6
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1315626113
 GameObject:
   m_ObjectHideFlags: 0

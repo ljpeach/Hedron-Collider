@@ -47,4 +47,9 @@ public class AmmoTracker : MonoBehaviour
     {
         return (100 / ammoCount) <= currentAmmo;
     }
+
+    public void reload()
+    {
+        currentAmmo = ammoMax;
+    }
 }

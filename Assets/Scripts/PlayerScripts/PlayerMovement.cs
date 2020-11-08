@@ -11,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     public float gravity;
     public float jumpHeight;
     public float sprintMulti;
+    public GameObject respawner;
+
     float airSpeed;
     float camRotation;
 
@@ -33,9 +35,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        handleCameraRotate();
-        handleMovement();
-        //Debug.Log(transform.rotation);
+            handleCameraRotate();
+            handleMovement();
     }
 
     void handleCameraRotate() 

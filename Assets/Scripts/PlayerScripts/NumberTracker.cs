@@ -13,6 +13,7 @@ public class NumberTracker : MonoBehaviour
     public bool regen;
     public float regenRate;
     public float regenDelay;
+    public GameObject respawner;
 
     float currentHealth;
     void Start()
@@ -43,15 +44,18 @@ public class NumberTracker : MonoBehaviour
         {
             CancelInvoke();
             currentHealth -= other.gameObject.GetComponent<DealDamage>().damage;
-            setCountText();
             other.gameObject.tag = "Untagged";
             regen = false;
             Invoke("regenOn", regenDelay);
+            other.gameObject.GetComponentInParent<Spawn>().aiOn = false;
+            setCountText();
         }
         if (currentHealth <= 0)
         {
             destroySequence();
+            setCountText();
         }
+        
     }
 
     void OnTriggerEnter(Collider other)
@@ -65,7 +69,7 @@ public class NumberTracker : MonoBehaviour
 
     void setCountText()
     {
-        healthBar.text = "Health: " + currentHealth.ToString() + "/" + (healthMax).ToString();
+        healthBar.text = "Health: " + ((int)currentHealth).ToString() + "/" + (healthMax).ToString();
         campBar.text = "Camps:" + campCount.ToString();
     }
 
@@ -76,6 +80,15 @@ public class NumberTracker : MonoBehaviour
 
     void destroySequence()
     {
-        print("sad times...");
+        CharacterController characterController = GetComponent<CharacterController>();
+        characterController.enabled = false;
+        transform.position = respawner.transform.position;
+        characterController.enabled = true;
+        heal(healthMax);
+    }
+
+    public void heal(int healNum)
+    {
+        currentHealth = healNum;
     }
 }
