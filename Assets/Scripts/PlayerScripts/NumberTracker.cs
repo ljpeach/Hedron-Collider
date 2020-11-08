@@ -21,6 +21,7 @@ public class NumberTracker : MonoBehaviour
         currentHealth = healthMax;
         setCountText();
         regen = true;
+        respawner.transform.position = transform.position;
     }
 
     void Update()
