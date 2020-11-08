@@ -38,6 +38,7 @@ public class MainRanged : MonoBehaviour
         gun = GetComponentInChildren<ProjectileValues>();
         center = player.transform.position;
         currentHealth = healthMax;
+        GetComponentInChildren<ProjectileValues>().parentLoc = GetComponentInParent<Spawn>().transform;
     }
 
     // Update is called once per frame
@@ -66,13 +67,13 @@ public class MainRanged : MonoBehaviour
         }
         timer += Time.deltaTime;
         angle += speed * Time.deltaTime *direction;
-        transform.position = new Vector3(Mathf.Cos(angle) * radius + center.x, height, Mathf.Sin(angle) * radius + center.z);
+        Vector3 target = new Vector3(Mathf.Cos(angle) * radius + center.x, height, Mathf.Sin(angle) * radius + center.z);
+        transform.position = Vector3.MoveTowards(transform.position, target, speed*Time.deltaTime*5);
         
     }
 
     void OnCollisionEnter()
     {
-
         direction *= -1;
     }
 

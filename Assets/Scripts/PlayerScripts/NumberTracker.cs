@@ -47,11 +47,11 @@ public class NumberTracker : MonoBehaviour
             other.gameObject.tag = "Untagged";
             regen = false;
             Invoke("regenOn", regenDelay);
-            other.gameObject.GetComponentInParent<Spawn>().aiOn = false;
             setCountText();
         }
         if (currentHealth <= 0)
         {
+            other.gameObject.GetComponentInParent<Spawn>().aiOn = false;
             destroySequence();
             setCountText();
         }
@@ -73,6 +73,12 @@ public class NumberTracker : MonoBehaviour
             regen = false;
             Invoke("regenOn", regenDelay);
             setCountText();
+            if (currentHealth <= 0)
+            {
+                other.gameObject.GetComponentInParent<Spawn>().aiOn = false;
+                destroySequence();
+                setCountText();
+            }
         }
     }
 

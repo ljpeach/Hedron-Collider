@@ -14,6 +14,7 @@ public class ProjectileValues : MonoBehaviour
     public GameObject projectile;
     public float projectileLife;
     public string damageTag;
+    public Transform parentLoc;
     
 
     void Start()
@@ -25,7 +26,8 @@ public class ProjectileValues : MonoBehaviour
 
     public void Shoot()
     {
-        GameObject proj=Instantiate(projectile,start.position,start.rotation);
+        GameObject proj=Instantiate(projectile,start.position,start.rotation,parentLoc);
+        proj.transform.localScale = new Vector3(1f, 1f, 1f);
         proj.tag = damageTag;
         Transform projTransform = proj.GetComponent<Transform>();
         Projectile projInfo = proj.GetComponent<Projectile>();

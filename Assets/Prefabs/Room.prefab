@@ -551,7 +551,8 @@ MonoBehaviour:
   radius: 5
   turnSpeed: 10
   healthMax: 15
-  height: 3
+  height: 2.5
+  damage: 10
 --- !u!114 &8582603306707345077
 MonoBehaviour:
   m_ObjectHideFlags: 0
