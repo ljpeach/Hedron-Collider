@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float sprintMulti;
     public GameObject respawner;
 
+    bool paused = false;
     float airSpeed;
     float camRotation;
 
@@ -35,8 +36,19 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            handleCameraRotate();
-            handleMovement();
+        handleCameraRotate();
+        handleMovement();
+        if (Input.GetButtonDown("Cancel") && !paused)
+        {
+
+            gameObject.GetComponent<PauseMenu>().pause();
+            paused = true;
+        }
+        else if (Input.GetButtonDown("Cancel") && paused)
+        {
+            gameObject.GetComponent<PauseMenu>().unPause();
+            paused = false;
+        }
     }
 
     void handleCameraRotate() 
