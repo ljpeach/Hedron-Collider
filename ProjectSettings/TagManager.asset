@@ -9,6 +9,7 @@ TagManager:
   - playerDamage
   - AISphere
   - meleeEnemy
+  - campPickup
   layers:
   - Default
   - TransparentFX
