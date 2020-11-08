@@ -1579,6 +1579,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 113905640}
     m_Modifications:
+    - target: {fileID: 496337723536350898, guid: 4b7b30f141ab1d64d8111b101df8e308,
+        type: 3}
+      propertyPath: doorText
+      value: 
+      objectReference: {fileID: 1651786295}
     - target: {fileID: 1808234703563103053, guid: 4b7b30f141ab1d64d8111b101df8e308,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2611,6 +2616,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2436919462546381668, guid: 2b551791639e53247bb1e4da32bd3e4a,
         type: 3}
+    - target: {fileID: 496337723536350898, guid: 4b7b30f141ab1d64d8111b101df8e308,
+        type: 3}
+      propertyPath: doorText
+      value: 
+      objectReference: {fileID: 1651786295}
     - target: {fileID: 563939824241481322, guid: 4b7b30f141ab1d64d8111b101df8e308,
         type: 3}
       propertyPath: enemyHealth
