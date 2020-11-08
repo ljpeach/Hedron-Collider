@@ -113,7 +113,7 @@ public class MeleeEnemy : MonoBehaviour
         if (Vector3.Distance(transform.position, target) < 1 || collided)
         {
             mode = 0;
-            gameObject.tag = "Untagged";
+            gameObject.tag = "meleeEnemy";
         }
 
     }
@@ -137,7 +137,7 @@ public class MeleeEnemy : MonoBehaviour
         {
             isGrounded = true;
         }
-        else 
+        else  if(other.gameObject.tag!="meleeEnemy")
         {
             collided = true;
         }
