@@ -478,6 +478,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  camp: {fileID: 8148560136214323803, guid: 935da6bc7068ba04cb91e05d3e31b30a, type: 3}
   enemySpawnManager: {fileID: 1108527114853093406}
   roomState: Claimed
   empty2Warring: 0

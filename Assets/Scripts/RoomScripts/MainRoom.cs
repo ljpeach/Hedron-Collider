@@ -5,6 +5,7 @@ using UnityEngine;
 public class MainRoom : MonoBehaviour
 {
     public GameObject[] neighborList;
+    public GameObject camp;
     //public GameObject neighborList1, neighborList2, neighborList3, neighborList4, neighborList5, neighborList6;
     public GameObject enemySpawnManager;
     public string roomState;
@@ -56,6 +57,21 @@ public class MainRoom : MonoBehaviour
             if (roomRef.roomState=="Empty" && cancel) 
             {
                 roomRef.cancelSwitch();
+            }
+        }
+    }
+
+    public void campSwitch()
+    {
+        roomState = "Camp";
+        cancelSwitch();
+        Transform parent = GetComponent<Transform>();
+        foreach (Transform child in parent)
+        {
+            if (child.name == "RoomCenter")
+            {
+                Instantiate(camp, child);
+                break;
             }
         }
     }

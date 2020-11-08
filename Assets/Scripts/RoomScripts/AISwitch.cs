@@ -20,6 +20,22 @@ public class AISwitch : MonoBehaviour
             enemyConditions.aiOn = true;
         }
     }
+
+    void OnTriggerStay(Collider other)
+    {
+        MainRoom parentRoom = GetComponentInParent<MainRoom>();
+        NumberTracker playerNums = other.gameObject.GetComponent<NumberTracker>();
+        if (other.gameObject.tag=="Player" && parentRoom.roomState=="Empty" && playerNums.campCount>=1)
+        {
+            Debug.Log("e to camp");
+            if (Input.GetButton("Interact"))
+            {
+                parentRoom.campSwitch();
+                playerNums.campCount--;
+            }
+        }
+    }
+
     void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Player")
