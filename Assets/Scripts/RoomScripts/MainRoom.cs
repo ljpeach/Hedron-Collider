@@ -11,6 +11,8 @@ public class MainRoom : MonoBehaviour
     public float empty2Warring;
     public float warringDuration;
     public int enemyCount;
+    ScalingTracker claimCounter;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,12 +24,17 @@ public class MainRoom : MonoBehaviour
         neighborList[4] = neighborList5.GetComponent<MainRoom>();
         neighborList[5] = neighborList6.GetComponent<MainRoom>();
         */
-        enemySpawnManager.GetComponent<Spawn>().fillOut();
+        claimCounter = GetComponentInParent<ScalingTracker>();
+        if (roomState == "Claimed")
+        {
+            claimCounter.claimedCount++;
+            enemySpawnManager.GetComponent<Spawn>().fillOut();
+        }
     }
 
-    void emptySwitch()
+    public void emptySwitch()
     {
-        GetComponentInParent<ScalingTracker>().claimedCount--;
+        claimCounter.claimedCount--;
         roomState = "Empty";
         for (int i = 0; i < neighborList.Length; i++)
         {
@@ -50,7 +57,7 @@ public class MainRoom : MonoBehaviour
     void claimedSwitch()
     {
         enemySpawnManager.GetComponent<Spawn>().fillOut();
-        GetComponentInParent<ScalingTracker>().claimedCount++;
+        claimCounter.claimedCount++;
         for (int i = 0; i < neighborList.Length; i++)
         {
             if (neighborList[i].GetComponent<MainRoom>().roomState == "Empty")

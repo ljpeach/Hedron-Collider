@@ -6,27 +6,32 @@ public class Spawner : MonoBehaviour
 {
     public GameObject enemy;
     public GameObject aggro;
+    public ScalingTracker enemyScaler;
+
+    meleeStats meleeNums;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         aggro = GetComponentInParent<PlayerIndicator>().player;
-        Debug.Log(aggro);
+        meleeNums = GetComponentInParent<meleeStats>();
+        //enemyScaler = GetComponentInParent<ScalingTracker>();
     }
     public void createEnemies()
     {
         
         GameObject newEnemy = Instantiate(enemy, transform.position+new Vector3(0,1f,0), transform.rotation, GetComponentInParent<Spawn>().gameObject.transform);
         MeleeEnemy setup = newEnemy.GetComponent<MeleeEnemy>();
-        setup.healthMax = 10;
-        setup.speed = 2;
+        setup.healthMax = meleeNums.enemyHealth;//10
+        setup.speed = meleeNums.enemySpeed;//2
         setup.player = aggro;
-        setup.gravity = 10;
-        setup.attackRange = 5;
-        setup.chargeTime = 5;
-        setup.postLockTime = 2;
-        setup.chargeDist = 10;
+        setup.gravity = meleeNums.enemyGravity;//20
+        setup.attackRange = meleeNums.attackRange;//5
+        setup.chargeTime = meleeNums.chargeTime;//5
+        setup.postLockTime = meleeNums.postLockTime;//2
+        setup.chargeDist = meleeNums.chargeDist;//10
 
         DealDamage dmgSetup = newEnemy.GetComponent<DealDamage>();
-        dmgSetup.damage = 5;
+        dmgSetup.damage = meleeNums.enemyDamage;//5
     }
 }

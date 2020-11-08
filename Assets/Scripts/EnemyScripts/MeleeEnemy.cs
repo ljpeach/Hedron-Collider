@@ -13,6 +13,7 @@ public class MeleeEnemy : MonoBehaviour
     public float postLockTime;
     public float chargeDist;
 
+    MainRoom parentRoom;
     Rigidbody rigidBody;
     Light lght;
     Transform playerPos;
@@ -27,6 +28,7 @@ public class MeleeEnemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GetComponentInParent<PlayerIndicator>().player;
         playerPos = player.GetComponent<Transform>();
         currentHealth = healthMax;
         airSpeed = 0;
@@ -36,6 +38,8 @@ public class MeleeEnemy : MonoBehaviour
         rigidBody = GetComponent<Rigidbody>();
         intensity = 0;
         chargeDuration = 0;
+        parentRoom = GetComponentInParent<MainRoom>();
+        parentRoom.enemyCount += 1;
         //rn.material.EnableKeyword("_EmissiveExposureWeight");
     }
 
@@ -143,6 +147,11 @@ public class MeleeEnemy : MonoBehaviour
 
     void destroySequence()
     {
+        parentRoom.enemyCount--;
+        if (parentRoom.enemyCount == 0)
+        {
+            parentRoom.emptySwitch();
+        }
         Destroy(gameObject);
     }
 
