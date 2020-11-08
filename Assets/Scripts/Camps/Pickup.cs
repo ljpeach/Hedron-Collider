@@ -17,7 +17,7 @@ public class Pickup : MonoBehaviour
         x += Time.deltaTime;
         if (x >= Mathf.PI * 2)
         {
-            x = 0;
+            x -= Mathf.PI * 2;
         }
         transform.Rotate(new Vector3(0, 90f, 0) * Time.deltaTime);
     }

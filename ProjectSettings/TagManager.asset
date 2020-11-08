@@ -10,6 +10,7 @@ TagManager:
   - AISphere
   - meleeEnemy
   - campPickup
+  - ExitObject
   layers:
   - Default
   - TransparentFX
