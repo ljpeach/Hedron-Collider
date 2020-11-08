@@ -3,42 +3,62 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MainRanged : MonoBehaviour
-{
-    public GameObject player;
+{ 
     public float RoF;
     public float radius = 5;
     public float turnSpeed;
     public float healthMax;
-    public float currentHealth;
+    public float height;
     public int direction;
 
+    GameObject player;
+    MainRoom parentRoom;
+    float currentHealth;
     float speed;
     float angle = 0;
     float timer;
     ProjectileValues gun;
     Vector3 center;
-    float height;
+    Spawn aiCheck;
+    Light lght;
+    float intensity;
+    bool dead = false;
 
     void Start()
     {
+        player = GetComponentInParent<MiscReferences>().player;
+        parentRoom = GetComponentInParent<MainRoom>();
+        parentRoom.enemyCount += 1;
+        aiCheck = GetComponentInParent<Spawn>();
+        lght = GetComponentInChildren<Light>();
+        intensity = 0;
         direction = 1;
         speed = (2 * Mathf.PI) / turnSpeed;
         timer = 0;
         gun = GetComponentInChildren<ProjectileValues>();
         center = player.transform.position;
-        height = transform.position.y;
         currentHealth = healthMax;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!aiCheck.aiOn)
+        {
+            lght.intensity = 0;
+            timer = 0;
+            return;
+        }
         if (Mathf.Pow(player.transform.position.x - center.x, 2) + Mathf.Pow(player.transform.position.z - center.z, 2) > radius*radius)
         {
             direction *= -1;
             updateCenter();
         }
         transform.LookAt(player.transform.position);
+
+        intensity = 2f * timer / RoF;
+        lght.intensity = intensity;
+
         if (timer >= RoF)
         {
             gun.Shoot();
@@ -50,8 +70,31 @@ public class MainRanged : MonoBehaviour
         
     }
 
+    void OnCollisionEnter()
+    {
+
+        direction *= -1;
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "enemyDamage")
+        {
+            currentHealth -= other.gameObject.GetComponent<DealDamage>().damage;
+            if (currentHealth <= 0 && !dead)
+            {
+                destroySequence();
+            }
+        }
+    }
+
     public void destroySequence()
     {
+        parentRoom.enemyCount--;
+        if (parentRoom.enemyCount == 0)
+        {
+            parentRoom.emptySwitch();
+        }
         Destroy(gameObject);
     }
 
