@@ -6,4 +6,5 @@ public class MiscReferences : MonoBehaviour
 {
     public GameObject player;
     public GameObject doorUI;
+    public GameObject campUI;
 }

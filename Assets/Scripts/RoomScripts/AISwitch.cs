@@ -7,13 +7,14 @@ public class AISwitch : MonoBehaviour
 {
     public GameObject enemyBox;
     public GameObject doorText;
-    public GameObject placeText;
+    GameObject campUI;
 
     Spawn enemyConditions;
 
     void Start()
     {
          enemyConditions= enemyBox.GetComponent<Spawn>();
+        campUI = GetComponentInParent<MiscReferences>().campUI;
     }
 
     void OnTriggerEnter(Collider other)
@@ -30,9 +31,11 @@ public class AISwitch : MonoBehaviour
         NumberTracker playerNums = other.gameObject.GetComponent<NumberTracker>();
         if (!doorText.activeSelf && other.gameObject.tag=="Player" && parentRoom.roomState=="Empty" && playerNums.campCount>=1)
         {
-            Debug.Log("e to camp");
+            campUI.SetActive(true);
+            campUI.GetComponent<TextMeshProUGUI>().text = "Press E to Place A Camp.";
             if (Input.GetButton("Interact"))
             {
+                campUI.SetActive(false);
                 parentRoom.campSwitch();
                 playerNums.campCount--;
             }
@@ -44,6 +47,7 @@ public class AISwitch : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             enemyConditions.aiOn = false;
+            campUI.SetActive(false);
         }
     }
 }

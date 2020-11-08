@@ -1,15 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class HealStation : MonoBehaviour
 {
-    // Start is called before the first frame update
+    GameObject campUI;
+    void Start()
+    {
+        campUI = GetComponentInParent<MiscReferences>().campUI;
+    }
+
     void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("e to heal");
+            campUI.SetActive(true);
+            campUI.GetComponent<TextMeshProUGUI>().text = "Press E to Heal.";
             if (Input.GetButton("Interact"))
             {
                 Debug.Log("pressed");
@@ -19,6 +26,11 @@ public class HealStation : MonoBehaviour
                 ammo.reload();
             }
         }
+    }
+
+    void OnTriggerExit()
+    {
+        campUI.SetActive(false);
     }
 
 }
