@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class AISwitch : MonoBehaviour
 {
     public GameObject enemyBox;
+    public GameObject doorText;
+    public GameObject placeText;
 
     Spawn enemyConditions;
 
@@ -25,7 +28,7 @@ public class AISwitch : MonoBehaviour
     {
         MainRoom parentRoom = GetComponentInParent<MainRoom>();
         NumberTracker playerNums = other.gameObject.GetComponent<NumberTracker>();
-        if (other.gameObject.tag=="Player" && parentRoom.roomState=="Empty" && playerNums.campCount>=1)
+        if (!doorText.activeSelf && other.gameObject.tag=="Player" && parentRoom.roomState=="Empty" && playerNums.campCount>=1)
         {
             Debug.Log("e to camp");
             if (Input.GetButton("Interact"))
