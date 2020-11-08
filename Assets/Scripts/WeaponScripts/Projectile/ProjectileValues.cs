@@ -13,6 +13,7 @@ public class ProjectileValues : MonoBehaviour
     public int damage;
     public GameObject projectile;
     public float projectileLife;
+    public string damageTag;
     
 
     void Start()
@@ -25,7 +26,7 @@ public class ProjectileValues : MonoBehaviour
     public void Shoot()
     {
         GameObject proj=Instantiate(projectile,start.position,start.rotation);
-        proj.tag = "enemyDamage";
+        proj.tag = damageTag;
         Transform projTransform = proj.GetComponent<Transform>();
         Projectile projInfo = proj.GetComponent<Projectile>();
         projInfo.setAttributes(speed, damage,projectileLife);

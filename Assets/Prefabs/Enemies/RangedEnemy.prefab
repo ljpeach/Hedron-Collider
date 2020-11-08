@@ -96,6 +96,7 @@ MonoBehaviour:
   projectile: {fileID: 4339595433952449526, guid: 40d0ea9cde26a0e42893ae037451a62f,
     type: 3}
   projectileLife: 3
+  damageTag: playerDamage
 --- !u!1 &1490072183157212727
 GameObject:
   m_ObjectHideFlags: 0

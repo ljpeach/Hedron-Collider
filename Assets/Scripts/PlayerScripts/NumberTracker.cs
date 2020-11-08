@@ -65,6 +65,15 @@ public class NumberTracker : MonoBehaviour
             campCount++;
             Destroy(other.gameObject);
         }
+        if (other.gameObject.CompareTag("playerDamage"))
+        {
+            CancelInvoke();
+            currentHealth -= other.gameObject.GetComponent<DealDamage>().damage;
+            other.gameObject.tag = "Untagged";
+            regen = false;
+            Invoke("regenOn", regenDelay);
+            setCountText();
+        }
     }
 
     void setCountText()
