@@ -54,6 +54,15 @@ public class NumberTracker : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("campPickup"))
+        {
+            campCount++;
+            Destroy(other.gameObject);
+        }
+    }
+
     void setCountText()
     {
         healthBar.text = "Health: " + currentHealth.ToString() + "/" + (healthMax).ToString();
