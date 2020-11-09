@@ -167,8 +167,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationY: {fileID: 1276320294}
   rotationX: {fileID: 181904415}
-  speed: 20
-  damage: 3
+  speed: 25
+  damage: 5
   projectile: {fileID: 4339595433952449526, guid: 40d0ea9cde26a0e42893ae037451a62f,
     type: 3}
   projectileLife: 2
@@ -11682,7 +11682,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1276320294}
   m_LocalRotation: {x: -0, y: -0.71503514, z: -0, w: 0.69908863}
-  m_LocalPosition: {x: -249.4, y: 1, z: -8.1}
+  m_LocalPosition: {x: 200, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 181904418}

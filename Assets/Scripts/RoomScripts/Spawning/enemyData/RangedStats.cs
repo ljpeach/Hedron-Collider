@@ -7,7 +7,7 @@ public class RangedStats : MonoBehaviour
     public float RoF = 5;
     public float radius = 5;
     public float turnSpeed = 10;
-    public float healthMax = 15;
-    public float height = 3;
+    public float healthMax = 10;
+    public float height = 2.5f;
     public int damage = 10;
 }

@@ -415,7 +415,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyBox: {fileID: 1108527114853093406}
   doorText: {fileID: 0}
-  placeText: {fileID: 0}
 --- !u!1 &5574554785049800269
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,12 +526,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be0716a6d291911469784fcd50c03f36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 2
-  enemySpeed: 2
+  enemyHealth: 15
+  enemySpeed: 5
   enemyGravity: 20
-  attackRange: 5
-  chargeTime: 5
-  postLockTime: 2
+  attackRange: 7
+  chargeTime: 2
+  postLockTime: 0.5
   chargeDist: 10
   enemyDamage: 5
 --- !u!114 &7961166946978797856
@@ -548,9 +547,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RoF: 5
-  radius: 5
+  radius: 7
   turnSpeed: 10
-  healthMax: 15
+  healthMax: 9
   height: 2.5
   damage: 10
 --- !u!114 &8582603306707345077

@@ -57,7 +57,7 @@ public class MainRanged : MonoBehaviour
         }
         transform.LookAt(player.transform.position);
 
-        intensity = 2f * timer / RoF;
+        intensity = 0.5f * timer / RoF;
         lght.intensity = intensity;
 
         if (timer >= RoF)
