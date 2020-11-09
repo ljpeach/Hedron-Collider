@@ -19,7 +19,7 @@ public class HealStation : MonoBehaviour
             campUI.GetComponent<TextMeshProUGUI>().text = "Press E to Heal.";
             if (Input.GetButton("Interact"))
             {
-                Debug.Log("pressed");
+                //Debug.Log("pressed");
                 NumberTracker playerNums = other.gameObject.GetComponent<NumberTracker>();
                 playerNums.heal(playerNums.healthMax);
                 AmmoTracker ammo = playerNums.GetComponentInChildren<AmmoTracker>();
