@@ -40,7 +40,7 @@ public class AISwitch : MonoBehaviour
                 playerNums.campCount--;
             }
         }
-        else if(other.gameObject.tag == "Player")
+        else if(doorText.activeSelf && other.gameObject.tag == "Player")
         {
             campUI.SetActive(false);
         }

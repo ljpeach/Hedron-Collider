@@ -14,6 +14,7 @@ public class NumberTracker : MonoBehaviour
     public float regenRate;
     public float regenDelay;
     public GameObject respawner;
+    public GameObject deathScreen;
 
     float currentHealth;
     void Start()
@@ -100,6 +101,10 @@ public class NumberTracker : MonoBehaviour
         characterController.enabled = false;
         transform.position = respawner.transform.position;
         characterController.enabled = true;
+        deathScreen.gameObject.SetActive(true);
+        gameObject.GetComponent<PlayerMovement>().enabled = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         heal(healthMax);
     }
 

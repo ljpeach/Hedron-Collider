@@ -11,7 +11,6 @@ public class PlayerMovement : MonoBehaviour
     public float gravity;
     public float jumpHeight;
     public float sprintMulti;
-    public GameObject respawner;
 
     bool paused = false;
     float airSpeed;
@@ -36,8 +35,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        handleCameraRotate();
-        handleMovement();
+        if (!paused)
+        {
+            handleCameraRotate();
+            handleMovement();
+        }
         if (Input.GetButtonDown("Cancel") && !paused)
         {
 
@@ -47,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
         else if (Input.GetButtonDown("Cancel") && paused)
         {
             gameObject.GetComponent<PauseMenu>().unPause();
-            paused = false;
+            unPause();
         }
     }
 
@@ -95,5 +97,10 @@ public class PlayerMovement : MonoBehaviour
             runMulti = 1;
         }
         characterController.Move(transform.TransformVector(rawMove)*Time.deltaTime*moveSpeed*runMulti);
+    }
+
+    public void unPause()
+    {
+        paused = false;
     }
 }

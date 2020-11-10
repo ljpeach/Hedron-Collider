@@ -39,7 +39,7 @@ public class DoorController : MonoBehaviour
     {
         while (transform.position.y > startPos.y - 5f)
         {
-            transform.position -= new Vector3(0, .01f, 0);
+            transform.position -= new Vector3(0, 1.5f, 0)*Time.deltaTime;
             yield return null;
         }
         yield return new WaitForSeconds(2);

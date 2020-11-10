@@ -19,7 +19,7 @@ public class AmmoTracker : MonoBehaviour
         currentAmmo = ammoMax;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (currentAmmo < ammoMax)
         {
@@ -35,7 +35,7 @@ public class AmmoTracker : MonoBehaviour
     void setCountText()
     {
         countText.text = "Ammo: " + ((int)(currentAmmo/(100f/ammoCount))).ToString() + "/" + (ammoCount).ToString();
-        entireAmmo.text = currentAmmo.ToString() + "/100";
+        entireAmmo.text = ((int)currentAmmo).ToString() + "/100";
     }
 
     public void removeAmmo()
