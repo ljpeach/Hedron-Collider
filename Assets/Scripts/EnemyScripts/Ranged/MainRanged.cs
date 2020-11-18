@@ -101,6 +101,7 @@ public class MainRanged : MonoBehaviour
         parentRoom.enemyCount--;
         if (parentRoom.enemyCount == 0)
         {
+            parentRoom.cancelSwitch();
             parentRoom.emptySwitch();
         }
         Destroy(gameObject);
