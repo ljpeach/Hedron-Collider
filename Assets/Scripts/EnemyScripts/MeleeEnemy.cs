@@ -13,6 +13,10 @@ public class MeleeEnemy : MonoBehaviour
     public float postLockTime;
     public float chargeDist;
 
+    public Material orig;
+    public Material damageStay;
+
+    Renderer rm;
     MainRoom parentRoom;
     Rigidbody rigidBody;
     Light lght;
@@ -45,7 +49,7 @@ public class MeleeEnemy : MonoBehaviour
         parentRoom.enemyCount += 1;
         collided = false;
         aiCheck = GetComponentInParent<Spawn>();
-        //rn.material.EnableKeyword("_EmissiveExposureWeight");
+        rm = GetComponent<Renderer>();
     }
 
     void Update()
@@ -135,6 +139,7 @@ public class MeleeEnemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("enemyDamage"))
         {
+            StartCoroutine("showDamaged");
             currentHealth -= other.gameObject.GetComponent<DealDamage>().damage;
             if (!dead && currentHealth <= 0)
             {
@@ -176,6 +181,14 @@ public class MeleeEnemy : MonoBehaviour
             parentRoom.emptySwitch();
         }
         Destroy(gameObject);
+    }
+
+    IEnumerator showDamaged()
+    {
+        rm.material = damageStay;
+        yield return new WaitForSeconds(.1f);
+        rm.material = orig;
+        yield break;
     }
 
 }
