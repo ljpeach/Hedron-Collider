@@ -47,7 +47,8 @@ public class Spawner : MonoBehaviour
             setup.turnSpeed = rangedNums.turnSpeed;
             setup.healthMax = rangedNums.healthMax;
             setup.height = rangedNums.height;
-            setup.orig = GetComponentInParent<ScalingTracker>().factionMats[GetComponentInParent<MainRoom>().faction];
+            setup.orig = GetComponentInParent<ScalingTracker>().factionMats[faction];
+            setup.faction = faction;
 
             ProjectileValues dmgSetup = newEnemy.GetComponentInChildren<ProjectileValues>();
             dmgSetup.damage = rangedNums.damage;//5

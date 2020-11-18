@@ -12,6 +12,7 @@ public class MainRanged : MonoBehaviour
     public int direction;
     public Material orig;
     public Material damageStay;
+    public int faction;
 
     Renderer rm;
     GameObject player;
