@@ -175,7 +175,7 @@ public class MeleeEnemy : MonoBehaviour
         collided = false;
     }
 
-    void destroySequence()
+    public void destroySequence()
     {
         parentRoom.enemyCount--;
         if (parentRoom.enemyCount == 0)

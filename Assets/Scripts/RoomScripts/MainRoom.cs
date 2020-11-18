@@ -85,6 +85,25 @@ public class MainRoom : MonoBehaviour
     void claimedSwitch()
     {
         roomState = "Claimed";
+        if (enemyCount>0)
+        {
+            MainRanged[] rangedEnemies = GetComponentsInChildren<MainRanged>();
+            for (int i=0; i<rangedEnemies.Length; i++)
+            {
+                if (rangedEnemies[i].faction != faction)
+                {
+                    rangedEnemies[i].destroySequence();
+                }
+            }
+            MeleeEnemy[] meleeEnemies = GetComponentsInChildren<MeleeEnemy>();
+            for (int i=0; i<meleeEnemies.Length; i++)
+            {
+                if (meleeEnemies[i].faction != faction)
+                {
+                    meleeEnemies[i].destroySequence();
+                }
+            }
+        }
         enemySpawnManager.GetComponent<Spawn>().fillOut();
         claimCounter.factionList[faction]++;
         for (int i = 0; i < neighborList.Length; i++)
