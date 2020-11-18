@@ -43,6 +43,7 @@ public class MainRanged : MonoBehaviour
         currentHealth = healthMax;
         GetComponentInChildren<ProjectileValues>().parentLoc = GetComponentInParent<Spawn>().transform;
         rm = transform.Find("Geometry").Find("Tetrahedron").gameObject.GetComponent<Renderer>();
+        rm.material = orig;
     }
 
     // Update is called once per frame

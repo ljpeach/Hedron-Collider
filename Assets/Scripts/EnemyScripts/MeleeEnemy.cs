@@ -50,6 +50,7 @@ public class MeleeEnemy : MonoBehaviour
         collided = false;
         aiCheck = GetComponentInParent<Spawn>();
         rm = GetComponent<Renderer>();
+        rm.material = orig;
     }
 
     void Update()

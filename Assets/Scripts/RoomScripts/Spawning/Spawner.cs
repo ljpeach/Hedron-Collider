@@ -33,6 +33,7 @@ public class Spawner : MonoBehaviour
             setup.chargeTime = meleeNums.chargeTime;//5
             setup.postLockTime = meleeNums.postLockTime;//2
             setup.chargeDist = meleeNums.chargeDist;//10
+            setup.orig = GetComponentInParent<ScalingTracker>().factionMats[GetComponentInParent<MainRoom>().faction];
 
             DealDamage dmgSetup = newEnemy.GetComponent<DealDamage>();
             dmgSetup.damage = meleeNums.enemyDamage;//5
@@ -45,6 +46,7 @@ public class Spawner : MonoBehaviour
             setup.turnSpeed = rangedNums.turnSpeed;
             setup.healthMax = rangedNums.healthMax;
             setup.height = rangedNums.height;
+            setup.orig = GetComponentInParent<ScalingTracker>().factionMats[GetComponentInParent<MainRoom>().faction];
 
             ProjectileValues dmgSetup = newEnemy.GetComponentInChildren<ProjectileValues>();
             dmgSetup.damage = rangedNums.damage;//5

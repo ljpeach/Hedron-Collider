@@ -473,6 +473,7 @@ MonoBehaviour:
   empty2Warring: 0
   warringDuration: 0
   enemyCount: 0
+  faction: -1
 --- !u!1 &6460581939900168187
 GameObject:
   m_ObjectHideFlags: 0

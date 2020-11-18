@@ -12,30 +12,27 @@ public class MainRoom : MonoBehaviour
     public float empty2Warring;
     public float warringDuration;
     public int enemyCount;
+    public int faction;
     ScalingTracker claimCounter;
     
     // Start is called before the first frame update
     void Start()
     {
-        /*
-        neighborList[0] = neighborList1.GetComponent<MainRoom>();
-        neighborList[1] = neighborList2.GetComponent<MainRoom>();
-        neighborList[2] = neighborList3.GetComponent<MainRoom>();
-        neighborList[3] = neighborList4.GetComponent<MainRoom>();
-        neighborList[4] = neighborList5.GetComponent<MainRoom>();
-        neighborList[5] = neighborList6.GetComponent<MainRoom>();
-        */
         claimCounter = GetComponentInParent<ScalingTracker>();
         if (roomState == "Claimed")
         {
-            claimCounter.claimedCount++;
+            if (faction == -1)
+            {
+                faction = Random.Range(0, claimCounter.factionList.Length);
+            }
+            claimCounter.factionList[faction]++;
             enemySpawnManager.GetComponent<Spawn>().fillOut();
         }
     }
 
     public void emptySwitch()
     {
-        claimCounter.claimedCount--;
+        claimCounter.factionList[faction]--;
         roomState = "Empty";
 
         for (int i = 0; i < neighborList.Length; i++)
@@ -87,7 +84,7 @@ public class MainRoom : MonoBehaviour
     {
         roomState = "Claimed";
         enemySpawnManager.GetComponent<Spawn>().fillOut();
-        claimCounter.claimedCount++;
+        claimCounter.factionList[faction]++;
         for (int i = 0; i < neighborList.Length; i++)
         {
             if (neighborList[i].GetComponent<MainRoom>().roomState == "Empty")
@@ -99,11 +96,36 @@ public class MainRoom : MonoBehaviour
 
     public void invokeWar()
     {
+        faction = victorCalculate();
         Invoke("warringSwitch", empty2Warring);
     }
 
     public void cancelSwitch()
     {
         CancelInvoke();
+    }
+
+    int victorCalculate()
+    {
+        int[] factionTracker = new int[claimCounter.factionList.Length];
+        for (int i = 0; i < neighborList.Length; i++)
+        {
+            if (neighborList[i].GetComponent<MainRoom>().roomState == "Claimed")
+            {
+                factionTracker[neighborList[i].GetComponent<MainRoom>().faction]+=1;
+            }
+        }
+        int newFact = 0;
+        float maxScore = 0;
+        for (int i = 0; i < factionTracker.Length; i++)
+        {
+            float factScore = factionTracker[i] * claimCounter.factionList[i]+Random.value;
+            if (factScore>maxScore)
+            {
+                maxScore = factScore;
+                newFact = i;
+            }
+        }
+        return newFact;
     }
 }
