@@ -10,7 +10,10 @@ public class MainRanged : MonoBehaviour
     public float healthMax;
     public float height;
     public int direction;
+    public Material orig;
+    public Material damageStay;
 
+    Renderer rm;
     GameObject player;
     MainRoom parentRoom;
     float currentHealth;
@@ -39,6 +42,7 @@ public class MainRanged : MonoBehaviour
         center = player.transform.position;
         currentHealth = healthMax;
         GetComponentInChildren<ProjectileValues>().parentLoc = GetComponentInParent<Spawn>().transform;
+        rm = transform.Find("Geometry").Find("Tetrahedron").gameObject.GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -81,6 +85,7 @@ public class MainRanged : MonoBehaviour
     {
         if (other.gameObject.tag == "enemyDamage")
         {
+            StartCoroutine("showDamaged");
             currentHealth -= other.gameObject.GetComponent<DealDamage>().damage;
             if (currentHealth <= 0 && !dead)
             {
@@ -102,5 +107,13 @@ public class MainRanged : MonoBehaviour
     void updateCenter()
     {
         center = player.GetComponent<Transform>().position;
+    }
+
+    IEnumerator showDamaged()
+    {
+        rm.material = damageStay;
+        yield return new WaitForSeconds(.1f);
+        rm.material = orig;
+        yield break;
     }
 }

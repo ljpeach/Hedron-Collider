@@ -52,6 +52,8 @@ MonoBehaviour:
   healthMax: 15
   height: 0
   direction: 0
+  orig: {fileID: 2100000, guid: 66504301fb421f94a9902d4104a6c3f9, type: 2}
+  damageStay: {fileID: 2100000, guid: 90ac3a0b4109222448ac36f945536fe9, type: 2}
 --- !u!135 &6796846551342403883
 SphereCollider:
   m_ObjectHideFlags: 0
