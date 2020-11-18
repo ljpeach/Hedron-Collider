@@ -41,6 +41,7 @@ public class MainRoom : MonoBehaviour
             if (roomRef.roomState == "Claimed")
             {
                 invokeWar();
+                break;
             }
             bool cancel = true;
             for(int j=0; j<roomRef.neighborList.Length; j++)
