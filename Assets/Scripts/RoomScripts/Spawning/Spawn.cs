@@ -11,19 +11,22 @@ public class Spawn : MonoBehaviour
     }
     public void fillOut()
     {
-        foreach (Transform child in transform)
+        Spawner[] spawners = GetComponentsInChildren<Spawner>();
+
+        for (int i = 0; i < spawners.Length; i++)
         {
-            child.gameObject.BroadcastMessage("createEnemies", SendMessageOptions.DontRequireReceiver);
+            spawners[i].createEnemies(GetComponentInParent<MainRoom>().faction);
         }
     }
 
     public void warFillOut()
     {
         Spawner[] spawners = GetComponentsInChildren<Spawner>();
+        GameObject[] rooms = GetComponentInParent<MainRoom>().neighborList;
 
-        for (int i = 0; i < GetComponentInParent<MainRoom>().neighborList.Length; i++)
+        for (int i = 0; i < rooms.Length; i++)
         {
-            spawners[i].createEnemies();
+            spawners[i].createEnemies(rooms[i].GetComponent<MainRoom>().faction);
         }
     }
 

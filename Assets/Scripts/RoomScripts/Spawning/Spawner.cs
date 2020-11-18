@@ -19,7 +19,7 @@ public class Spawner : MonoBehaviour
         enemies = GetComponentInParent<EnemyList>().enemyList;
         choice = Random.Range(0, enemies.Length);
     }
-    public void createEnemies()
+    public void createEnemies(int faction)
     {
 
         GameObject newEnemy = Instantiate(enemies[choice], transform.position + new Vector3(0, 1f, 0), transform.rotation, GetComponentInParent<Spawn>().gameObject.transform);
@@ -33,7 +33,8 @@ public class Spawner : MonoBehaviour
             setup.chargeTime = meleeNums.chargeTime;//5
             setup.postLockTime = meleeNums.postLockTime;//2
             setup.chargeDist = meleeNums.chargeDist;//10
-            setup.orig = GetComponentInParent<ScalingTracker>().factionMats[GetComponentInParent<MainRoom>().faction];
+            setup.orig = GetComponentInParent<ScalingTracker>().factionMats[faction];
+            setup.faction = faction;
 
             DealDamage dmgSetup = newEnemy.GetComponent<DealDamage>();
             dmgSetup.damage = meleeNums.enemyDamage;//5

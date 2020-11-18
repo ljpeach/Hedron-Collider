@@ -78,6 +78,7 @@ public class MainRoom : MonoBehaviour
     void warringSwitch()
     {
         roomState = "Warring";
+        enemySpawnManager.GetComponent<Spawn>().warFillOut();
         Invoke("claimedSwitch", warringDuration);
     }
 

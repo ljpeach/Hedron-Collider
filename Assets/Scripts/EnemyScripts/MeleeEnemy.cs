@@ -15,6 +15,7 @@ public class MeleeEnemy : MonoBehaviour
 
     public Material orig;
     public Material damageStay;
+    public int faction;
 
     Renderer rm;
     MainRoom parentRoom;
