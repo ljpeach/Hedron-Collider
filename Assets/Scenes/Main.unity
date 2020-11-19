@@ -18609,7 +18609,7 @@ PrefabInstance:
     - target: {fileID: 7509671222227810017, guid: 75f148f3c155a4c4bafaf587e3aeec89,
         type: 3}
       propertyPath: campCount
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7509671222227810019, guid: 75f148f3c155a4c4bafaf587e3aeec89,
         type: 3}
@@ -18644,7 +18644,7 @@ PrefabInstance:
     - target: {fileID: 7509671222227810028, guid: 75f148f3c155a4c4bafaf587e3aeec89,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 52.9
+      value: 220
       objectReference: {fileID: 0}
     - target: {fileID: 7509671222227810028, guid: 75f148f3c155a4c4bafaf587e3aeec89,
         type: 3}
