@@ -98,15 +98,20 @@ public class NumberTracker : MonoBehaviour
 
     void destroySequence()
     {
-        CharacterController characterController = GetComponent<CharacterController>();
-        characterController.enabled = false;
-        transform.position = respawner.transform.position;
-        characterController.enabled = true;
+        respawn();
         deathScreen.gameObject.SetActive(true);
         gameObject.GetComponent<PlayerMovement>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         heal(healthMax);
+    }
+
+    public void respawn()
+    {
+        CharacterController characterController = GetComponent<CharacterController>();
+        characterController.enabled = false;
+        transform.position = respawner.transform.position + Vector3.up;
+        characterController.enabled = true;
     }
 
     public void heal(int healNum)

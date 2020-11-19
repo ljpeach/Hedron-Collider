@@ -8,7 +8,16 @@ public class HealStation : MonoBehaviour
     GameObject campUI;
     void Start()
     {
-        campUI = GetComponentInParent<MiscReferences>().campUI;
+        MiscReferences refs = GetComponentInParent<MiscReferences>();
+        campUI = refs.campUI;
+        GameObject player = refs.player;
+        //Debug.Log(Vector3.Distance(player.transform.position, transform.position));
+        ///*
+        if (Vector3.Distance(player.transform.position, transform.position) <= 4 && player.transform.position.x>transform.position.x)
+        {
+            player.GetComponent<NumberTracker>().respawn();
+        }
+        //*/
     }
 
     void OnTriggerStay(Collider other)
