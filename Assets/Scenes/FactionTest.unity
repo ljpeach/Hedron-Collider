@@ -4585,7 +4585,7 @@ PrefabInstance:
     - target: {fileID: 8781888631834484641, guid: 4b7b30f141ab1d64d8111b101df8e308,
         type: 3}
       propertyPath: empty2Warring
-      value: 30
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8781888631834484641, guid: 4b7b30f141ab1d64d8111b101df8e308,
         type: 3}
@@ -4617,6 +4617,11 @@ PrefabInstance:
       propertyPath: neighborList.Array.data[5]
       value: 
       objectReference: {fileID: 1370228536}
+    - target: {fileID: 8781888631834484641, guid: 4b7b30f141ab1d64d8111b101df8e308,
+        type: 3}
+      propertyPath: faction
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b7b30f141ab1d64d8111b101df8e308, type: 3}
 --- !u!1 &569409247 stripped
@@ -9388,6 +9393,11 @@ PrefabInstance:
       propertyPath: neighborList.Array.data[2]
       value: 
       objectReference: {fileID: 1370228536}
+    - target: {fileID: 8781888631834484641, guid: 4b7b30f141ab1d64d8111b101df8e308,
+        type: 3}
+      propertyPath: faction
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b7b30f141ab1d64d8111b101df8e308, type: 3}
 --- !u!1 &1252441092
@@ -10436,6 +10446,11 @@ PrefabInstance:
       propertyPath: neighborList.Array.data[2]
       value: 
       objectReference: {fileID: 503625707}
+    - target: {fileID: 8781888631834484641, guid: 4b7b30f141ab1d64d8111b101df8e308,
+        type: 3}
+      propertyPath: faction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8877923396528508724, guid: 4b7b30f141ab1d64d8111b101df8e308,
         type: 3}
       propertyPath: m_IsActive
@@ -14411,6 +14426,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 113905640}
     m_Modifications:
+    - target: {fileID: 115370951167168533, guid: 4b7b30f141ab1d64d8111b101df8e308,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 252137502986678557, guid: 4b7b30f141ab1d64d8111b101df8e308,
         type: 3}
       propertyPath: aggro
@@ -14511,6 +14531,16 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyDamage
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 682790215584669457, guid: 4b7b30f141ab1d64d8111b101df8e308,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1085310418209719122, guid: 4b7b30f141ab1d64d8111b101df8e308,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1181756250810237318, guid: 4b7b30f141ab1d64d8111b101df8e308,
         type: 3}
@@ -14732,6 +14762,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3484706972875031922, guid: 4b7b30f141ab1d64d8111b101df8e308,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4273059083036478348, guid: 4b7b30f141ab1d64d8111b101df8e308,
         type: 3}
       propertyPath: m_RootOrder
@@ -14882,6 +14917,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8623024470333226882, guid: 4b7b30f141ab1d64d8111b101df8e308,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8781888631834484641, guid: 4b7b30f141ab1d64d8111b101df8e308,
         type: 3}
       propertyPath: neighborList.Array.size
@@ -14900,12 +14940,12 @@ PrefabInstance:
     - target: {fileID: 8781888631834484641, guid: 4b7b30f141ab1d64d8111b101df8e308,
         type: 3}
       propertyPath: empty2Warring
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8781888631834484641, guid: 4b7b30f141ab1d64d8111b101df8e308,
         type: 3}
       propertyPath: warringDuration
-      value: 10
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 8781888631834484641, guid: 4b7b30f141ab1d64d8111b101df8e308,
         type: 3}
@@ -14917,6 +14957,16 @@ PrefabInstance:
       propertyPath: neighborList.Array.data[2]
       value: 
       objectReference: {fileID: 2005829882}
+    - target: {fileID: 8781888631834484641, guid: 4b7b30f141ab1d64d8111b101df8e308,
+        type: 3}
+      propertyPath: faction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8781888631834484641, guid: 4b7b30f141ab1d64d8111b101df8e308,
+        type: 3}
+      propertyPath: enemyCount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8877923396528508724, guid: 4b7b30f141ab1d64d8111b101df8e308,
         type: 3}
       propertyPath: m_IsActive
