@@ -13,6 +13,7 @@ public class MainRoom : MonoBehaviour
     public float warringDuration;
     public int enemyCount;
     public int faction;
+    public bool warStart = false;
     ScalingTracker claimCounter;
     
     // Start is called before the first frame update
@@ -34,7 +35,7 @@ public class MainRoom : MonoBehaviour
     {
         claimCounter.factionList[faction]--;
         roomState = "Empty";
-
+        warStart = false;
         for (int i = 0; i < neighborList.Length; i++)
         {
             MainRoom roomRef = neighborList[i].GetComponent<MainRoom>();
@@ -108,15 +109,17 @@ public class MainRoom : MonoBehaviour
         claimCounter.factionList[faction]++;
         for (int i = 0; i < neighborList.Length; i++)
         {
-            if (neighborList[i].GetComponent<MainRoom>().roomState == "Empty")
+            MainRoom neighbor = neighborList[i].GetComponent<MainRoom>();
+            if (neighbor.roomState == "Empty" && !neighbor.warStart)
             {
-                neighborList[i].GetComponent<MainRoom>().invokeWar();
+                neighbor.invokeWar();
             }
         }
     }
 
     public void invokeWar()
     {
+        warStart = true;
         faction = victorCalculate();
         Invoke("warringSwitch", empty2Warring);
     }

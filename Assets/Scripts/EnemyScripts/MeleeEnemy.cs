@@ -184,6 +184,7 @@ public class MeleeEnemy : MonoBehaviour
         if (other.gameObject.tag == "Ground")
         {
             isGrounded = true;
+            collided = true;
         }
         else if (other.gameObject.tag == "playerDamage" && parentRoom.roomState == "Warring")
         {
