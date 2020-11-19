@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         camRotation = 0;
         // Mouse tends to be even more sensitive in WebGL due to mouse acceleration, so reduce it even more
-        lookMultiplier *= 0.25f;
+        //lookMultiplier *= 0.25f;
     }
 
     // Update is called once per frame
