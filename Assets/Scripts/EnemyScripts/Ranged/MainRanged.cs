@@ -15,6 +15,7 @@ public class MainRanged : MonoBehaviour
     public int faction;
 
     Renderer rm;
+    Rigidbody rb;
     GameObject player;
     public GameObject aggro;
     MainRoom parentRoom;
@@ -47,6 +48,8 @@ public class MainRanged : MonoBehaviour
         rm = transform.Find("Geometry").Find("Tetrahedron").gameObject.GetComponent<Renderer>();
         rm.material = orig;
         aggro = player;
+        rb = GetComponent<Rigidbody>();
+        Debug.Log(rb);
     }
 
     // Update is called once per frame
@@ -81,7 +84,8 @@ public class MainRanged : MonoBehaviour
         angle += speed * Time.deltaTime *direction;
         Vector3 target = new Vector3(Mathf.Cos(angle) * radius + center.x, height, Mathf.Sin(angle) * radius + center.z);
         transform.position = Vector3.MoveTowards(transform.position, target, speed*Time.deltaTime*5);
-        
+            rb.velocity = new Vector3(0, 0, 0);
+
     }
 
     void OnCollisionEnter(Collision other)
