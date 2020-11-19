@@ -23,10 +23,15 @@ public class Spawn : MonoBehaviour
     {
         Spawner[] spawners = GetComponentsInChildren<Spawner>();
         GameObject[] rooms = GetComponentInParent<MainRoom>().neighborList;
-
-        for (int i = 0; i < rooms.Length; i++)
+        int j = 0;
+        for (int i = 0; i < rooms.Length && j<spawners.Length; i++)
         {
-            spawners[i].createEnemies(rooms[i].GetComponent<MainRoom>().faction);
+            MainRoom neighbor = rooms[i].GetComponent<MainRoom>();
+            if (neighbor.roomState == "Claimed")
+            {
+                spawners[j].createEnemies(neighbor.faction);
+                j++;
+            }
         }
     }
 
