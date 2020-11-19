@@ -11,6 +11,7 @@ TagManager:
   - meleeEnemy
   - campPickup
   - ExitObject
+  - Door
   layers:
   - Default
   - TransparentFX
