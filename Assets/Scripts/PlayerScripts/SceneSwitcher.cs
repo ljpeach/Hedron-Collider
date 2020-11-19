@@ -13,7 +13,7 @@ public class SceneSwitcher : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
-            Debug.Log("Victory!");
+            //Debug.Log("Victory!");
         }
 
     }
