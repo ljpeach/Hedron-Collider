@@ -433,6 +433,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorJam (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -534,6 +539,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorJam (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -608,6 +618,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorJam (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
@@ -736,6 +751,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorJam (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -810,6 +830,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorJam (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
@@ -950,6 +975,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tetrahedron
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b060fc1917d164a4aa00e5fc768d4d6e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b060fc1917d164a4aa00e5fc768d4d6e, type: 3}
 --- !u!1001 &102447904
@@ -963,6 +993,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorJam (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
@@ -1123,6 +1158,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorJam (39)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
@@ -1558,6 +1598,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorJam (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1666,6 +1711,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorJam (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
@@ -1995,6 +2045,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tetrahedron (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b060fc1917d164a4aa00e5fc768d4d6e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b060fc1917d164a4aa00e5fc768d4d6e, type: 3}
@@ -2475,6 +2530,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorJam (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2543,6 +2603,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorJam (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
@@ -2770,6 +2835,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tetrahedron (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b060fc1917d164a4aa00e5fc768d4d6e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b060fc1917d164a4aa00e5fc768d4d6e, type: 3}
 --- !u!1001 &271363014
@@ -2853,6 +2923,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tetrahedron (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b060fc1917d164a4aa00e5fc768d4d6e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b060fc1917d164a4aa00e5fc768d4d6e, type: 3}
@@ -2938,6 +3013,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tetrahedron (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b060fc1917d164a4aa00e5fc768d4d6e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b060fc1917d164a4aa00e5fc768d4d6e, type: 3}
 --- !u!1001 &277167776
@@ -2951,6 +3031,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorJam (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
@@ -3214,6 +3299,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PortalMound (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cba9468658493be409c8511aac67ce4f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cba9468658493be409c8511aac67ce4f, type: 3}
 --- !u!4 &326378457 stripped
@@ -3236,7 +3326,7 @@ GameObject:
   - component: {fileID: 334877843}
   m_Layer: 0
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3330,7 +3420,7 @@ GameObject:
   - component: {fileID: 349049557}
   m_Layer: 0
   m_Name: Cylinder (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3490,6 +3580,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorJam (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
@@ -4032,6 +4127,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tetrahedron (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b060fc1917d164a4aa00e5fc768d4d6e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b060fc1917d164a4aa00e5fc768d4d6e, type: 3}
 --- !u!1 &476161865
@@ -4198,6 +4298,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorJam (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
@@ -4559,6 +4664,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PortalMound (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cba9468658493be409c8511aac67ce4f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cba9468658493be409c8511aac67ce4f, type: 3}
 --- !u!1001 &540561127
@@ -4642,6 +4752,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sword (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e2dd17c5a0c70d4aaeeeb79c51c7c4f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e2dd17c5a0c70d4aaeeeb79c51c7c4f, type: 3}
@@ -5716,6 +5831,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorJam (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6514,6 +6634,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tetrahedron (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b060fc1917d164a4aa00e5fc768d4d6e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b060fc1917d164a4aa00e5fc768d4d6e, type: 3}
 --- !u!1 &638991950
@@ -6725,6 +6850,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tetrahedron (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b060fc1917d164a4aa00e5fc768d4d6e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b060fc1917d164a4aa00e5fc768d4d6e, type: 3}
 --- !u!1001 &674384129
@@ -6738,6 +6868,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorJam (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
@@ -6813,6 +6948,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorJam (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
@@ -6952,6 +7092,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e2dd17c5a0c70d4aaeeeb79c51c7c4f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e2dd17c5a0c70d4aaeeeb79c51c7c4f, type: 3}
@@ -7416,6 +7561,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorJam (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7484,6 +7634,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorJam (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
@@ -7566,6 +7721,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorJam (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7634,6 +7794,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorJam (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
@@ -7909,6 +8074,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorJam (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7984,6 +8154,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorJam (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8055,7 +8230,7 @@ GameObject:
   - component: {fileID: 883139754}
   m_Layer: 0
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8870,6 +9045,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorJam (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9120,6 +9300,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tetrahedron (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b060fc1917d164a4aa00e5fc768d4d6e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b060fc1917d164a4aa00e5fc768d4d6e, type: 3}
 --- !u!1 &959013092
@@ -9176,7 +9361,7 @@ GameObject:
   - component: {fileID: 982387010}
   m_Layer: 0
   m_Name: Cylinder (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9285,6 +9470,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorJam (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
@@ -9425,6 +9615,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tetrahedron (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b060fc1917d164a4aa00e5fc768d4d6e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b060fc1917d164a4aa00e5fc768d4d6e, type: 3}
 --- !u!1 &1009704389
@@ -9545,6 +9740,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tetrahedron (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b060fc1917d164a4aa00e5fc768d4d6e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b060fc1917d164a4aa00e5fc768d4d6e, type: 3}
 --- !u!4 &1027799298 stripped
@@ -9641,6 +9841,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PortalMound (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cba9468658493be409c8511aac67ce4f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cba9468658493be409c8511aac67ce4f, type: 3}
 --- !u!1 &1103029792 stripped
@@ -9680,6 +9885,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorJam (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
@@ -9826,6 +10036,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tetrahedron (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b060fc1917d164a4aa00e5fc768d4d6e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b060fc1917d164a4aa00e5fc768d4d6e, type: 3}
 --- !u!1001 &1126528123
@@ -9839,6 +10054,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorJam (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
@@ -9941,6 +10161,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorJam (36)
       objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10016,6 +10241,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorJam (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10087,7 +10317,7 @@ GameObject:
   - component: {fileID: 1187269204}
   m_Layer: 0
   m_Name: Cylinder (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11985,7 +12215,7 @@ GameObject:
   - component: {fileID: 1286452180}
   m_Layer: 0
   m_Name: Cylinder (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12619,6 +12849,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorJam (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12763,6 +12998,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PortalMound
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cba9468658493be409c8511aac67ce4f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cba9468658493be409c8511aac67ce4f, type: 3}
@@ -13028,6 +13268,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tetrahedron (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b060fc1917d164a4aa00e5fc768d4d6e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b060fc1917d164a4aa00e5fc768d4d6e, type: 3}
 --- !u!1001 &1404633001
@@ -13041,6 +13286,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorJam (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
@@ -13119,7 +13369,7 @@ GameObject:
   - component: {fileID: 1412744422}
   m_Layer: 0
   m_Name: Cylinder (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13329,6 +13579,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorJam (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
@@ -13996,6 +14251,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorJam (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14135,6 +14395,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tetrahedron
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b060fc1917d164a4aa00e5fc768d4d6e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b060fc1917d164a4aa00e5fc768d4d6e, type: 3}
 --- !u!1001 &1573818470
@@ -14148,6 +14413,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorJam (35)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
@@ -14236,6 +14506,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorJam (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14313,7 +14588,7 @@ GameObject:
   - component: {fileID: 1599564246}
   m_Layer: 0
   m_Name: Cylinder (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14552,7 +14827,7 @@ GameObject:
   - component: {fileID: 1612458504}
   m_Layer: 0
   m_Name: Cylinder (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15092,6 +15367,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PortalMound (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cba9468658493be409c8511aac67ce4f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cba9468658493be409c8511aac67ce4f, type: 3}
 --- !u!1001 &1668207071
@@ -15105,6 +15385,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorJam (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
@@ -15177,7 +15462,7 @@ GameObject:
   - component: {fileID: 1672046666}
   m_Layer: 0
   m_Name: Cylinder (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15866,7 +16151,7 @@ GameObject:
   - component: {fileID: 1696938191}
   m_Layer: 0
   m_Name: Cylinder (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16040,6 +16325,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e2dd17c5a0c70d4aaeeeb79c51c7c4f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e2dd17c5a0c70d4aaeeeb79c51c7c4f, type: 3}
 --- !u!4 &1700106215 stripped
@@ -16154,6 +16444,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorJam (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
@@ -16499,7 +16794,7 @@ GameObject:
   - component: {fileID: 1826152400}
   m_Layer: 0
   m_Name: Cylinder (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16667,6 +16962,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e2dd17c5a0c70d4aaeeeb79c51c7c4f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e2dd17c5a0c70d4aaeeeb79c51c7c4f, type: 3}
 --- !u!4 &1849029066 stripped
@@ -16783,6 +17083,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e2dd17c5a0c70d4aaeeeb79c51c7c4f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e2dd17c5a0c70d4aaeeeb79c51c7c4f, type: 3}
 --- !u!4 &1857278736 stripped
@@ -16822,6 +17127,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorJam (38)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
@@ -17032,6 +17342,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tetrahedron (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b060fc1917d164a4aa00e5fc768d4d6e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b060fc1917d164a4aa00e5fc768d4d6e, type: 3}
 --- !u!4 &1931086749 stripped
@@ -17121,6 +17436,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tetrahedron (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b060fc1917d164a4aa00e5fc768d4d6e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b060fc1917d164a4aa00e5fc768d4d6e, type: 3}
@@ -17275,6 +17595,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sword (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0e2dd17c5a0c70d4aaeeeb79c51c7c4f,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e2dd17c5a0c70d4aaeeeb79c51c7c4f, type: 3}
 --- !u!4 &1975945427 stripped
@@ -17385,6 +17710,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tetrahedron (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b060fc1917d164a4aa00e5fc768d4d6e,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b060fc1917d164a4aa00e5fc768d4d6e, type: 3}
 --- !u!1001 &1995470452
@@ -17398,6 +17728,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorJam (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
@@ -17467,6 +17802,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorJam (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
@@ -17764,6 +18104,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorJam (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17838,6 +18183,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorJam
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634073025837820760, guid: 290188547f6753441bd94b0c687806cc,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 9109828940185189678, guid: 290188547f6753441bd94b0c687806cc,
         type: 3}
