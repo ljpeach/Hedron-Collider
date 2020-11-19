@@ -17,6 +17,7 @@ public class AmmoTracker : MonoBehaviour
     {
         ammoMax = 100f;
         currentAmmo = ammoMax;
+        rechargeRate += DifficultySetting.difficulty * 13;
     }
 
     void FixedUpdate()

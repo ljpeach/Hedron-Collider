@@ -22,6 +22,7 @@ public class NumberTracker : MonoBehaviour
         currentHealth = healthMax;
         setCountText();
         regen = true;
+        regenRate += DifficultySetting.difficulty * 2.5f;
         respawner.transform.position = transform.position;
     }
 

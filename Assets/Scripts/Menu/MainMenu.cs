@@ -10,6 +10,12 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(firstLevelIndex);
     }
+
+    public void SetDifficulty(int dif)
+    {
+        DifficultySetting.difficulty = dif;
+    }
+
     public void QuitGame()
     {
 #if UNITY_EDITOR
