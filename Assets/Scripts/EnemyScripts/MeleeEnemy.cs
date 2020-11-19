@@ -162,7 +162,6 @@ public class MeleeEnemy : MonoBehaviour
             if (!dead && currentHealth <= 0)
             {
                 dead = true;
-                //Debug.Log(currentHealth);
                 destroySequence();
 
             }
@@ -210,24 +209,18 @@ public class MeleeEnemy : MonoBehaviour
         MeleeEnemy[] meleeEnems = enemies.GetComponentsInChildren<MeleeEnemy>();
         for (int i = 0; i < rangedEnems.Length; i++)
         {
-            Debug.Log("HELLOO!??!?!");
-            print(rangedEnems[i].faction);
             if (rangedEnems[i].faction != faction && Random.value <0.3f)
             {
                 aggro = rangedEnems[i].gameObject;
                 aggroUpdated = true;
-                if (faction == 0) Debug.Log("ugh");
             }
         }
-        print(meleeEnems.Length);
         for (int i = 0; i < meleeEnems.Length; i++)
         {
-            print(meleeEnems[i].faction);
             if (meleeEnems[i].faction != faction && Random.value < 0.3f)
             {
                 aggro = meleeEnems[i].gameObject;
                 aggroUpdated = true;
-                if (faction == 0) Debug.Log("ugh");
             }
         }
         if (!aggroUpdated)
