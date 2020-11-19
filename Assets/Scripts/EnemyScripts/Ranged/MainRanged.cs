@@ -84,14 +84,32 @@ public class MainRanged : MonoBehaviour
         
     }
 
-    void OnCollisionEnter()
+    void OnCollisionEnter(Collision other)
     {
         direction *= -1;
+        if (other.gameObject.tag == "playerDamage" && parentRoom.roomState == "Warring")
+        {
+            StartCoroutine("showDamaged");
+            currentHealth -= other.gameObject.GetComponent<DealDamage>().damage;
+            if (currentHealth <= 0 && !dead)
+            {
+                destroySequence();
+            }
+        }
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "enemyDamage")
+        {
+            StartCoroutine("showDamaged");
+            currentHealth -= other.gameObject.GetComponent<DealDamage>().damage;
+            if (currentHealth <= 0 && !dead)
+            {
+                destroySequence();
+            }
+        }
+        else if (other.gameObject.tag == "playerDamage" && parentRoom.roomState == "Warring")
         {
             StartCoroutine("showDamaged");
             currentHealth -= other.gameObject.GetComponent<DealDamage>().damage;

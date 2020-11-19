@@ -166,6 +166,17 @@ public class MeleeEnemy : MonoBehaviour
 
             }
         }
+        else if (other.gameObject.tag == "playerDamage" && parentRoom.roomState == "Warring")
+        {
+            StartCoroutine("showDamaged");
+            currentHealth -= other.gameObject.GetComponent<DealDamage>().damage;
+            if (!dead && currentHealth <= 0)
+            {
+                dead = true;
+                destroySequence();
+
+            }
+        }
     }
 
     void OnCollisionEnter(Collision other)
@@ -174,10 +185,22 @@ public class MeleeEnemy : MonoBehaviour
         {
             isGrounded = true;
         }
+        else if (other.gameObject.tag == "playerDamage" && parentRoom.roomState == "Warring")
+        {
+            StartCoroutine("showDamaged");
+            currentHealth -= other.gameObject.GetComponent<DealDamage>().damage;
+            if (!dead && currentHealth <= 0)
+            {
+                dead = true;
+                destroySequence();
+
+            }
+        }
         else  if(other.gameObject.tag!="meleeEnemy")
         {
             collided = true;
         }
+
 
     }
 
