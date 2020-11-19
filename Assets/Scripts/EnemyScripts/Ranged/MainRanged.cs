@@ -16,6 +16,7 @@ public class MainRanged : MonoBehaviour
 
     Renderer rm;
     GameObject player;
+    public GameObject aggro;
     MainRoom parentRoom;
     float currentHealth;
     float speed;
@@ -45,6 +46,7 @@ public class MainRanged : MonoBehaviour
         GetComponentInChildren<ProjectileValues>().parentLoc = GetComponentInParent<Spawn>().transform;
         rm = transform.Find("Geometry").Find("Tetrahedron").gameObject.GetComponent<Renderer>();
         rm.material = orig;
+        aggro = player;
     }
 
     // Update is called once per frame
@@ -56,12 +58,16 @@ public class MainRanged : MonoBehaviour
             timer = 0;
             return;
         }
-        if (Mathf.Pow(player.transform.position.x - center.x, 2) + Mathf.Pow(player.transform.position.z - center.z, 2) > radius*radius)
+        if (aggro == null)
+        {
+            aggro = player;
+        }
+        if (Mathf.Pow(aggro.transform.position.x - center.x, 2) + Mathf.Pow(aggro.transform.position.z - center.z, 2) > radius*radius)
         {
             direction *= -1;
             updateCenter();
         }
-        transform.LookAt(player.transform.position);
+        transform.LookAt(aggro.transform.position);
 
         intensity = 0.5f * timer / RoF;
         lght.intensity = intensity;
@@ -109,7 +115,43 @@ public class MainRanged : MonoBehaviour
 
     void updateCenter()
     {
-        center = player.GetComponent<Transform>().position;
+        center = aggro.GetComponent<Transform>().position;
+        if (parentRoom.roomState == "Warring")
+        {
+            changeAggro();
+        }
+        else
+        {
+            aggro = player;
+        }
+    }
+
+    void changeAggro()
+    {
+        GameObject enemies = GetComponentInParent<Spawn>().gameObject;
+        MainRanged[] rangedEnems = enemies.GetComponentsInChildren<MainRanged>();
+        MeleeEnemy[] meleeEnems = enemies.GetComponentsInChildren<MeleeEnemy>();
+        bool aggroUpdated = false;
+        for (int i = 0; i < rangedEnems.Length; i++)
+        {
+            if (rangedEnems[i].faction != faction && Random.value < 0.3f)
+            {
+                aggro = rangedEnems[i].gameObject;
+                aggroUpdated = true;
+            }
+        }
+        for (int i = 0; i < meleeEnems.Length; i++)
+        {
+            if (meleeEnems[i].faction != faction && Random.value < 0.3f)
+            {
+                aggro = meleeEnems[i].gameObject;
+                aggroUpdated = true;
+            }
+        }
+        if (!aggroUpdated)
+        {
+            aggro = player;
+        }
     }
 
     IEnumerator showDamaged()

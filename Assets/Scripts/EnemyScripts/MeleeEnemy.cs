@@ -6,7 +6,7 @@ public class MeleeEnemy : MonoBehaviour
 {
     public int healthMax;
     public float speed;
-    public GameObject player;
+    
     public float gravity;
     public float attackRange;
     public float chargeTime;
@@ -17,11 +17,12 @@ public class MeleeEnemy : MonoBehaviour
     public Material damageStay;
     public int faction;
 
+    GameObject player;
+    public GameObject aggro;
     Renderer rm;
     MainRoom parentRoom;
     Rigidbody rigidBody;
     Light lght;
-    Transform playerPos;
     Vector3 target;
     int currentHealth;
     float airSpeed;
@@ -30,6 +31,7 @@ public class MeleeEnemy : MonoBehaviour
     float chargeDuration;
     float intensity;
     bool collided;
+    bool aggroUpdated = false;
     Spawn aiCheck;
     bool dead = false;
 
@@ -37,7 +39,6 @@ public class MeleeEnemy : MonoBehaviour
     void Start()
     {
         player = GetComponentInParent<MiscReferences>().player;
-        playerPos = player.GetComponent<Transform>();
         currentHealth = healthMax;
         airSpeed = 0;
         isGrounded = false;
@@ -52,6 +53,7 @@ public class MeleeEnemy : MonoBehaviour
         aiCheck = GetComponentInParent<Spawn>();
         rm = GetComponent<Renderer>();
         rm.material = orig;
+        aggro = player;
     }
 
     void Update()
@@ -65,6 +67,10 @@ public class MeleeEnemy : MonoBehaviour
             gameObject.tag = "meleeEnemy";
             airSpeed = 0;
             return;
+        }
+        if (aggro == null)
+        {
+            aggro = player;
         }
         if (isGrounded || mode>=2)
         {
@@ -90,13 +96,13 @@ public class MeleeEnemy : MonoBehaviour
 
     void chase()
     {
-        if (Vector3.Distance(transform.position, playerPos.position) <= attackRange)
+        if (Vector3.Distance(transform.position, aggro.transform.position) <= attackRange)
         {
             mode += 1;
             return;
         }
-        transform.LookAt(playerPos);
-        Vector3 mid = Vector3.MoveTowards(transform.position, playerPos.position, speed * Time.deltaTime);
+        transform.LookAt(aggro.transform);
+        Vector3 mid = Vector3.MoveTowards(transform.position, aggro.transform.position, speed * Time.deltaTime);
         mid.y += airSpeed * Time.deltaTime;
         transform.position = mid;
     }
@@ -105,8 +111,8 @@ public class MeleeEnemy : MonoBehaviour
     {
         if (chargeTime - chargeDuration > postLockTime)
         {
-            transform.LookAt(playerPos);
-            target = playerPos.position+transform.forward;
+            transform.LookAt(aggro.transform);
+            target = aggro.transform.position+transform.forward;
         }
         rigidBody.velocity = Vector3.zero;
         rigidBody.angularVelocity = Vector3.zero;
@@ -122,6 +128,7 @@ public class MeleeEnemy : MonoBehaviour
             lght.intensity = 0;
             chargeDuration = 0;
             gameObject.tag = "playerDamage";
+            aggroUpdated = false;
         }
         
     }
@@ -133,6 +140,15 @@ public class MeleeEnemy : MonoBehaviour
         {
             mode = 0;
             gameObject.tag = "meleeEnemy";
+
+            if (parentRoom.roomState == "Warring" && !aggroUpdated)
+            {
+                changeAggro();
+            }
+            else if (!aggroUpdated)
+            {
+                aggro = player;
+            }
         }
 
     }
@@ -184,6 +200,40 @@ public class MeleeEnemy : MonoBehaviour
             parentRoom.emptySwitch();
         }
         Destroy(gameObject);
+    }
+
+    void changeAggro()
+    {
+        
+        GameObject enemies = GetComponentInParent<Spawn>().gameObject;
+        MainRanged[] rangedEnems = enemies.GetComponentsInChildren<MainRanged>();
+        MeleeEnemy[] meleeEnems = enemies.GetComponentsInChildren<MeleeEnemy>();
+        for (int i = 0; i < rangedEnems.Length; i++)
+        {
+            Debug.Log("HELLOO!??!?!");
+            print(rangedEnems[i].faction);
+            if (rangedEnems[i].faction != faction && Random.value <0.3f)
+            {
+                aggro = rangedEnems[i].gameObject;
+                aggroUpdated = true;
+                if (faction == 0) Debug.Log("ugh");
+            }
+        }
+        print(meleeEnems.Length);
+        for (int i = 0; i < meleeEnems.Length; i++)
+        {
+            print(meleeEnems[i].faction);
+            if (meleeEnems[i].faction != faction && Random.value < 0.3f)
+            {
+                aggro = meleeEnems[i].gameObject;
+                aggroUpdated = true;
+                if (faction == 0) Debug.Log("ugh");
+            }
+        }
+        if (!aggroUpdated)
+        {
+            aggro = player;
+        }
     }
 
     IEnumerator showDamaged()
