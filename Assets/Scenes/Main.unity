@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936287c4b45f6eb48b7f99ccb8754e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyAfter: 1
 --- !u!114 &27427835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1107,6 +1108,7 @@ Transform:
   - {fileID: 290208686}
   - {fileID: 48416681}
   - {fileID: 646491645}
+  - {fileID: 1084204675}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1889,6 +1891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936287c4b45f6eb48b7f99ccb8754e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyAfter: 1
 --- !u!114 &180352883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2378,6 +2381,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936287c4b45f6eb48b7f99ccb8754e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyAfter: 1
 --- !u!114 &198611597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3960,6 +3964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936287c4b45f6eb48b7f99ccb8754e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyAfter: 1
 --- !u!114 &476161868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6467,6 +6472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936287c4b45f6eb48b7f99ccb8754e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyAfter: 1
 --- !u!114 &638991953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9538,6 +9544,73 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 630150217967867331}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1084204674
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1084204675}
+  - component: {fileID: 1084204678}
+  - component: {fileID: 1084204677}
+  - component: {fileID: 1084204676}
+  m_Layer: 0
+  m_Name: EnemyCatcher
+  m_TagString: enemyDamage
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1084204675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084204674}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 20, y: -30, z: 0}
+  m_LocalScale: {x: 600, y: 20, z: 500}
+  m_Children: []
+  m_Father: {fileID: 113905640}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1084204676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084204674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb125a743003cae4492284e910b5bdd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1000
+--- !u!65 &1084204677
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084204674}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1084204678
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084204674}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1091470536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11844,6 +11917,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936287c4b45f6eb48b7f99ccb8754e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyAfter: 1
 --- !u!114 &1252441095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12542,6 +12616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936287c4b45f6eb48b7f99ccb8754e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyAfter: 1
 --- !u!114 &1321808755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13737,6 +13812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936287c4b45f6eb48b7f99ccb8754e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyAfter: 1
 --- !u!114 &1488619512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14995,6 +15071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936287c4b45f6eb48b7f99ccb8754e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyAfter: 1
 --- !u!114 &1660222521
 MonoBehaviour:
   m_ObjectHideFlags: 0
