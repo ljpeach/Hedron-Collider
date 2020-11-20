@@ -49,7 +49,6 @@ public class MainRanged : MonoBehaviour
         rm.material = orig;
         aggro = player;
         rb = GetComponent<Rigidbody>();
-        Debug.Log(rb);
     }
 
     // Update is called once per frame
