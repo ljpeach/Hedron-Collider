@@ -10,6 +10,7 @@ public class NumberTracker : MonoBehaviour
     public int healthMax;
     public TextMeshProUGUI healthBar;
     public TextMeshProUGUI campBar;
+    public TextMeshProUGUI doorControls;
     public bool regen;
     public float regenRate;
     public float regenDelay;
@@ -112,6 +113,8 @@ public class NumberTracker : MonoBehaviour
         characterController.enabled = false;
         transform.position = respawner.transform.position + Vector3.up;
         characterController.enabled = true;
+        doorControls.gameObject.SetActive(false);
+
     }
 
     public void heal(int healNum)

@@ -18688,6 +18688,11 @@ PrefabInstance:
       propertyPath: campCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7509671222227810017, guid: 75f148f3c155a4c4bafaf587e3aeec89,
+        type: 3}
+      propertyPath: doorControls
+      value: 
+      objectReference: {fileID: 1651786297}
     - target: {fileID: 7509671222227810019, guid: 75f148f3c155a4c4bafaf587e3aeec89,
         type: 3}
       propertyPath: m_Height

@@ -3603,6 +3603,11 @@ PrefabInstance:
       propertyPath: respawner
       value: 
       objectReference: {fileID: 1639696260}
+    - target: {fileID: 7509671222227810017, guid: 75f148f3c155a4c4bafaf587e3aeec89,
+        type: 3}
+      propertyPath: doorControls
+      value: 
+      objectReference: {fileID: 298778369}
     - target: {fileID: 7509671222227810022, guid: 75f148f3c155a4c4bafaf587e3aeec89,
         type: 3}
       propertyPath: pauseMenu

@@ -169,6 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936287c4b45f6eb48b7f99ccb8754e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyAfter: 1
 --- !u!114 &27427835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1675,6 +1676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936287c4b45f6eb48b7f99ccb8754e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyAfter: 1
 --- !u!114 &180352883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2085,6 +2087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936287c4b45f6eb48b7f99ccb8754e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyAfter: 1
 --- !u!114 &198611597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3492,6 +3495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936287c4b45f6eb48b7f99ccb8754e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyAfter: 1
 --- !u!114 &476161868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5829,6 +5833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936287c4b45f6eb48b7f99ccb8754e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyAfter: 1
 --- !u!114 &638991953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9447,6 +9452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936287c4b45f6eb48b7f99ccb8754e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyAfter: 1
 --- !u!114 &1252441095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10051,6 +10057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936287c4b45f6eb48b7f99ccb8754e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyAfter: 1
 --- !u!114 &1321808755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11058,6 +11065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936287c4b45f6eb48b7f99ccb8754e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyAfter: 1
 --- !u!114 &1488619512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12203,6 +12211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936287c4b45f6eb48b7f99ccb8754e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyAfter: 1
 --- !u!114 &1660222521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15113,6 +15122,11 @@ PrefabInstance:
       propertyPath: deathScreen
       value: 
       objectReference: {fileID: 1319929758}
+    - target: {fileID: 7509671222227810017, guid: 75f148f3c155a4c4bafaf587e3aeec89,
+        type: 3}
+      propertyPath: doorControls
+      value: 
+      objectReference: {fileID: 1651786297}
     - target: {fileID: 7509671222227810022, guid: 75f148f3c155a4c4bafaf587e3aeec89,
         type: 3}
       propertyPath: pauseMenu
