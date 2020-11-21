@@ -15,6 +15,7 @@ public class MeleeEnemy : MonoBehaviour
 
     public Material orig;
     public Material damageStay;
+    public Material inv;
     public int faction;
 
     GameObject player;
@@ -34,6 +35,7 @@ public class MeleeEnemy : MonoBehaviour
     bool aggroUpdated = false;
     Spawn aiCheck;
     bool dead = false;
+    bool damageable = true;
 
     // Start is called before the first frame update
     void Start()
@@ -60,12 +62,17 @@ public class MeleeEnemy : MonoBehaviour
     {
         if (!aiCheck.aiOn)
         {
-            mode = 0;
+            if (damageable)
+            {
+                rm.material = inv;
+            }
+            mode = -1;
             transform.localScale = new Vector3(1f, 1f, 1f);
             lght.intensity = 0;
             chargeDuration = 0;
             gameObject.tag = "meleeEnemy";
             airSpeed = 0;
+            damageable = false;
             return;
         }
         if (aggro == null)
@@ -79,6 +86,12 @@ public class MeleeEnemy : MonoBehaviour
         else
         {
             airSpeed += -1 * gravity*Time.deltaTime;
+        }
+        if (mode == -1)
+        {
+            rm.material = orig;
+            damageable = true;
+            mode++;
         }
         if (mode == 0)
         {
@@ -155,7 +168,7 @@ public class MeleeEnemy : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("enemyDamage"))
+        if (other.gameObject.CompareTag("enemyDamage") && damageable)
         {
             StartCoroutine("showDamaged");
             currentHealth -= other.gameObject.GetComponent<DealDamage>().damage;
@@ -166,7 +179,7 @@ public class MeleeEnemy : MonoBehaviour
 
             }
         }
-        else if (other.gameObject.tag == "playerDamage" && parentRoom.roomState == "Warring")
+        else if (other.gameObject.tag == "playerDamage" && parentRoom.roomState == "Warring" && damageable)
         {
             StartCoroutine("showDamaged");
             currentHealth -= other.gameObject.GetComponent<DealDamage>().damage;

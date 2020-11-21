@@ -12,6 +12,7 @@ public class MainRanged : MonoBehaviour
     public int direction;
     public Material orig;
     public Material damageStay;
+    public Material inv;
     public int faction;
 
     Renderer rm;
@@ -29,6 +30,8 @@ public class MainRanged : MonoBehaviour
     Light lght;
     float intensity;
     bool dead = false;
+    bool damageable = true;
+    bool switched = false;
 
     void Start()
     {
@@ -56,9 +59,22 @@ public class MainRanged : MonoBehaviour
     {
         if (!aiCheck.aiOn)
         {
+            if (damageable)
+            {
+                rm.material = inv;
+            }
             lght.intensity = 0;
             timer = 0;
+            switched = true;
+            damageable = false;
+            intensity = 0;
             return;
+        }
+        if (switched)
+        {
+            rm.material = orig;
+            damageable = true;
+            switched = false;
         }
         if (aggro == null)
         {
@@ -90,7 +106,7 @@ public class MainRanged : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
         direction *= -1;
-        if (other.gameObject.tag == "playerDamage" && parentRoom.roomState == "Warring")
+        if (other.gameObject.tag == "playerDamage" && parentRoom.roomState == "Warring" && damageable)
         {
             StartCoroutine("showDamaged");
             currentHealth -= other.gameObject.GetComponent<DealDamage>().damage;
@@ -103,7 +119,7 @@ public class MainRanged : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "enemyDamage")
+        if (other.gameObject.tag == "enemyDamage" && damageable)
         {
             StartCoroutine("showDamaged");
             currentHealth -= other.gameObject.GetComponent<DealDamage>().damage;
@@ -112,7 +128,7 @@ public class MainRanged : MonoBehaviour
                 destroySequence();
             }
         }
-        else if (other.gameObject.tag == "playerDamage" && parentRoom.roomState == "Warring")
+        else if (other.gameObject.tag == "playerDamage" && parentRoom.roomState == "Warring" && damageable)
         {
             StartCoroutine("showDamaged");
             currentHealth -= other.gameObject.GetComponent<DealDamage>().damage;

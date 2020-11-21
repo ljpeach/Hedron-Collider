@@ -266,7 +266,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthMax: 10
   speed: 2
-  player: {fileID: 0}
   gravity: 10
   attackRange: 5
   chargeTime: 5
@@ -274,6 +273,9 @@ MonoBehaviour:
   chargeDist: 10
   orig: {fileID: 2100000, guid: 66504301fb421f94a9902d4104a6c3f9, type: 2}
   damageStay: {fileID: 2100000, guid: 90ac3a0b4109222448ac36f945536fe9, type: 2}
+  inv: {fileID: 2100000, guid: 2d9d22127a8daca40b86ca2ce4fb8f99, type: 2}
+  faction: 0
+  aggro: {fileID: 0}
 --- !u!54 &4761650113251005177
 Rigidbody:
   m_ObjectHideFlags: 0
