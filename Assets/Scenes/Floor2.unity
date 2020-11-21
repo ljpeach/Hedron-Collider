@@ -12357,7 +12357,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -288, y: -170}
+  m_AnchoredPosition: {x: -288, y: -202}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &584025325
@@ -13106,7 +13106,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -288, y: -126}
+  m_AnchoredPosition: {x: -288, y: -157.99998}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &610045078
@@ -44082,7 +44082,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -288, y: -77}
+  m_AnchoredPosition: {x: -288, y: -108.99999}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2129030653
@@ -45885,6 +45885,16 @@ PrefabInstance:
       propertyPath: doorControls
       value: 
       objectReference: {fileID: 1651786297}
+    - target: {fileID: 7509671222227810018, guid: 75f148f3c155a4c4bafaf587e3aeec89,
+        type: 3}
+      propertyPath: sprintMulti
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7509671222227810018, guid: 75f148f3c155a4c4bafaf587e3aeec89,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 6.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7509671222227810022, guid: 75f148f3c155a4c4bafaf587e3aeec89,
         type: 3}
       propertyPath: pauseMenu

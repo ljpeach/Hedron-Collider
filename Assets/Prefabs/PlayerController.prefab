@@ -469,7 +469,7 @@ MonoBehaviour:
   cameraVerticalAngle: 0
   lookMultiplier: 5
   PlayerCam: {fileID: 7509671221107624170}
-  moveSpeed: 5
+  moveSpeed: 6.5
   gravity: 4
   jumpHeight: 2
   sprintMulti: 2
@@ -489,6 +489,7 @@ MonoBehaviour:
   healthMax: 50
   healthBar: {fileID: 0}
   campBar: {fileID: 0}
+  doorControls: {fileID: 0}
   regen: 1
   regenRate: 0
   regenDelay: 5

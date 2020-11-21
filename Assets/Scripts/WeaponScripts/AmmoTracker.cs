@@ -38,7 +38,7 @@ public class AmmoTracker : MonoBehaviour
     void setCountText()
     {
         countText.text = "Ammo: " + ((int)(currentAmmo/(100f/ammoCount))).ToString() + "/" + (ammoCount).ToString();
-        entireAmmo.text = ((int)currentAmmo).ToString() + "/100";
+        entireAmmo.text = "Weapon Energy: "+((int)currentAmmo).ToString() + "/100";
     }
 
     public void removeAmmo()
