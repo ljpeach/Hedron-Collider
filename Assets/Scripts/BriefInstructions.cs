@@ -5,10 +5,14 @@ using TMPro;
 
 public class BriefInstructions : MonoBehaviour
 {
+    public bool inst = true;
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine("shutOff");
+        if (inst)
+        {
+            StartCoroutine("shutOff");
+        }
     }
 
     IEnumerator shutOff()
@@ -23,6 +27,24 @@ public class BriefInstructions : MonoBehaviour
             yield return null;
         }
         gameObject.SetActive(false);
+        yield break;
+    }
+
+    public void activate()
+    {
+        StartCoroutine("turnOn");
+    }
+
+    IEnumerator turnOn()
+    {
+        TextMeshProUGUI instTest = gameObject.GetComponent<TextMeshProUGUI>();
+        Color32 col = instTest.color;
+        while (col.a < 255)
+        {
+            col.a++;
+            instTest.color = col;
+            yield return null;
+        }
         yield break;
     }
 }
